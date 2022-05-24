@@ -1,0 +1,38 @@
+  -- Syntax highlight
+require("nvim-treesitter.configs").setup {
+  ensure_installed = {
+    "bash",
+    "c",
+    "clojure",
+    "cmake",
+    "comment",
+    "cpp",
+    "css",
+    "dockerfile",
+    "elm",
+    "go",
+    "graphql",
+    "html",
+    "http",
+    "javascript",
+    "jsdoc",
+    "lua",
+    "make",
+    "markdown",
+    "php",
+    "python",
+    "regex",
+    "rust",
+    "scala",
+    "scss",
+    "toml",
+    "tsx",
+    "typescript",
+    "vim",
+    "yaml"
+  },
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+  },
+}
