@@ -26,7 +26,7 @@ opt.ruler = false
 opt.cursorline = true
 opt.signcolumn = "yes"
 opt.colorcolumn = "80"
-opt.guicursor = ''
+-- opt.guicursor = ''
 
 opt.expandtab = true
 opt.tabstop = 4
