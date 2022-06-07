@@ -2,7 +2,13 @@ export ZSH=$HOME/.oh-my-zsh
 export PATH=/opt/homebrew/bin:$PATH
 
 ZSH_THEME="func"
-plugins=(git vi-mode docker docker-compose)
+plugins=(
+    git
+    vi-mode
+    docker
+    docker-compose
+    zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
 
