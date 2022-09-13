@@ -26,7 +26,7 @@ To manage ZSH plugins and themes, you will need [Oh My Zsh](https://ohmyz.sh/) i
 - ### Tmux italic text
   To enable italic text on Tmux, make sure to:
   ```sh
-    tic tmux/screen-256color.terminfo
+    tic tmux/tmux.terminfo
   ```
 
-  See more in this [guide](https://gist.github.com/gutoyr/4192af1aced7a1b555df06bd3781a722).
+  See more in this [guide](https://herrbischoff.com/2020/08/how-to-enable-italics-in-tmux/).
