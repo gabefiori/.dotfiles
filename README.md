@@ -9,7 +9,7 @@ stow */             # set config files of all packages
 stow <package name> # set config files of a specific package
 ```
 
-## Info
+## Info:
 - Terminal: [Alacritty](https://alacritty.org/);
 - Shell: [ZSH](https://www.zsh.org/);
 - Multiplexer: [Tmux](https://github.com/tmux/tmux);
@@ -21,10 +21,12 @@ To manage neovim plugins, you will need [Packer](https://github.com/wbthomason/p
 ## ZSH:
 To manage ZSH plugins and themes, you will need [Oh My Zsh](https://ohmyz.sh/) installed.
 
-## Tmux italic problem
-To enable italic text on tmux make sure to:
-```sh
-tic tmux/screen-256color.terminfo
-```
+## Issues:
 
-see more in this [manual]:(https://gist.github.com/gutoyr/4192af1aced7a1b555df06bd3781a722)
+- ### Tmux italic text
+  To enable italic text, on Tmux make sure to:
+  ```sh
+    tic tmux/screen-256color.terminfo
+  ```
+
+  See more in this [guide](https://gist.github.com/gutoyr/4192af1aced7a1b555df06bd3781a722).
