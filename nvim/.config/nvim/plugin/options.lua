@@ -8,10 +8,8 @@ g.netrw_liststyle=3
 g.netrw_browse_split = 0
 
 -- Theme
-opt.termguicolors = true
-opt.background = 'dark'
-g.gruvbox_bold = 0
-cmd 'colorscheme gruvbox' 
+g.catppuccin_flavour = "mocha"
+cmd 'colorscheme catppuccin' 
 cmd 'syntax enable' 
 
 -- Main Configs

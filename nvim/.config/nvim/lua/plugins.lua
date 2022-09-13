@@ -31,7 +31,8 @@ return require('packer').startup(function()
   use 'tpope/vim-fugitive'
 
   -- Visual
-  use 'gruvbox-community/gruvbox'
+  -- use 'gruvbox-community/gruvbox'
+  use { "catppuccin/nvim", as = "catppuccin" }
   use 'kyazdani42/nvim-web-devicons'
   use 'hoob3rt/lualine.nvim'
 
