@@ -23,7 +23,7 @@ inoremap ! !<c-g>u
 inoremap ? ?<c-g>u
 
 " Git
-nnoremap <leader>gc <cmd>Telescope git_commits<cr>
+nnoremap <leader>gs <cmd>Neogit<cr>
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
@@ -31,7 +31,6 @@ nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 nnoremap <C-p> <cmd>lua require('telescope.builtin').git_files()<CR>
 nnoremap <C-b> <cmd>lua require('telescope.builtin').buffers()<CR>
-nnoremap <leader>fd <cmd>lua require('gfmonego.telescope').search_dotfiles()<cr>
 
 " Autocompletion
 " Use <Tab> and <S-Tab> to navigate through popup menu
