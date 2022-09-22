@@ -27,11 +27,10 @@ return require('packer').startup(function()
   use 'b3nj5m1n/kommentary'
 
   -- Git
+  use { 'TimUntersberger/neogit', requires = { 'nvim-lua/plenary.nvim' } }
   use 'lewis6991/gitsigns.nvim'
-  use 'tpope/vim-fugitive'
 
   -- Visual
-  -- use 'gruvbox-community/gruvbox'
   use { "catppuccin/nvim", as = "catppuccin" }
   use 'kyazdani42/nvim-web-devicons'
   use 'hoob3rt/lualine.nvim'

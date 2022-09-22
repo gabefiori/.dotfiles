@@ -32,7 +32,6 @@ nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 nnoremap <C-p> <cmd>lua require('telescope.builtin').git_files()<CR>
 nnoremap <C-b> <cmd>lua require('telescope.builtin').buffers()<CR>
 nnoremap <leader>fd <cmd>lua require('gfmonego.telescope').search_dotfiles()<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " Autocompletion
 " Use <Tab> and <S-Tab> to navigate through popup menu

@@ -18,9 +18,6 @@ opt.wildignore = {'**/node_modules/*', '**/.git/*'}
 opt.wrap = false
 opt.number = true
 opt.relativenumber = true
-opt.showcmd = false
-opt.showmode = false
-opt.ruler = false
 opt.cursorline = true
 opt.signcolumn = "yes"
 opt.colorcolumn = "80"
@@ -28,9 +25,10 @@ opt.colorcolumn = "80"
 
 opt.expandtab = true
 opt.tabstop = 4
+opt.softtabstop = 4
 opt.shiftwidth = 4
-opt.scrolloff= 10
-opt.autoindent = true
+opt.scrolloff= 8
+
 opt.smartindent = true
 
 opt.swapfile = false
@@ -40,12 +38,13 @@ opt.hidden = true
 opt.ignorecase = true
 opt.smartcase = true
 opt.incsearch = true
+opt.hlsearch = false
 
 opt.splitright = true
 opt.splitbelow = true
 
-opt.shortmess="c"
+opt.shortmess = "c"
 
-opt.updatetime = 80
+opt.updatetime = 50
 
 opt.completeopt = {'menuone', 'noinsert', 'noselect'}
