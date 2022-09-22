@@ -27,7 +27,7 @@ require("catppuccin").setup({
 	integrations = {
         cmp = true,
         treesitter = true,
-        gitsign = true,
+        gitsigns = true,
         neogit = true
 	},
 	color_overrides = {},
