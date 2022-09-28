@@ -28,6 +28,7 @@ alias cht="~/scripts/tmux-cht.sh"
 alias ts="~/scripts/tmux-sessionizer.sh"
 alias tmux="env TERM=screen-256color tmux"
 alias vim="nvim"
+alias cat="bat"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
