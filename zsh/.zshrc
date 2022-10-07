@@ -26,7 +26,6 @@ alias lla="ll -a"
 alias g="git"
 alias cht="~/scripts/tmux-cht.sh"
 alias ts="~/scripts/tmux-sessionizer.sh"
-alias tmux="env TERM=screen-256color tmux"
 alias vim="nvim"
 alias cat="bat"
 
