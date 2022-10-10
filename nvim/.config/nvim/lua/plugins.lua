@@ -1,6 +1,9 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function()
+  -- Performance
+  use 'lewis6991/impatient.nvim'
+
   -- Packer
   use 'wbthomason/packer.nvim'
 
@@ -8,6 +11,7 @@ return require('packer').startup(function()
   use 'neovim/nvim-lspconfig'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'nvim-treesitter/nvim-treesitter-context'
+  use 'folke/trouble.nvim'
 
   -- Completion
   use {'hrsh7th/nvim-cmp', 
