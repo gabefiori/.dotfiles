@@ -33,7 +33,7 @@ return require('packer').startup(function()
   use 'lewis6991/gitsigns.nvim'
 
   -- Visual
-  use { "catppuccin/nvim", as = "catppuccin" }
+  use 'sainnhe/gruvbox-material'
   use 'kyazdani42/nvim-web-devicons'
   use 'hoob3rt/lualine.nvim'
 

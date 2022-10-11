@@ -8,8 +8,14 @@ g.netrw_liststyle=3
 g.netrw_browse_split = 0
 
 -- Theme
-g.catppuccin_flavour = "mocha"
-cmd 'colorscheme catppuccin' 
+g.backup = 'dark'
+g.gruvbox_material_background = 'medium'
+g.gruvbox_material_enable_italic = 1
+g.gruvbox_material_better_performance = 1
+g.gruvbox_material_enable_bold = 0
+g.gruvbox_material_diagnostic_virtual_text = 1
+cmd 'colorscheme gruvbox-material' 
+
 cmd 'syntax enable' 
 
 -- Main Configs
@@ -38,7 +44,7 @@ opt.hidden = true
 opt.ignorecase = true
 opt.smartcase = true
 opt.incsearch = true
-opt.hlsearch = false
+opt.hlsearch = true
 
 opt.splitright = true
 opt.splitbelow = true
