@@ -38,7 +38,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 
-local servers = { 'gopls', 'pyright', 'rust_analyzer', 'tsserver', 'intelephense', 'html', 'cssls' }
+local servers = { 'gopls', 'pyright', 'tsserver', 'intelephense', 'html', 'cssls' }
 for _, lsp in pairs(servers) do
   lsp_config[lsp].setup {
     on_attach = on_attach,
@@ -49,6 +49,21 @@ for _, lsp in pairs(servers) do
     }
   }
 end
+
+lsp_config['rust_analyzer'].setup {
+    on_attach = on_attach,
+    capabilities = capabilities, 
+    flags = {
+      debounce_text_changes = 150,
+    },
+    settings = {
+      ["rust-analyzer"] = {
+        checkOnSave = {
+          command = "clippy"
+        },
+      }
+   }
+}
 
 lsp_config['diagnosticls'].setup {
   on_attach = on_attach,
