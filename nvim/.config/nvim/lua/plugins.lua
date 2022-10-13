@@ -11,13 +11,16 @@ return require('packer').startup(function()
   use 'folke/trouble.nvim'
 
   -- Completion
-  use {'hrsh7th/nvim-cmp', 
-    requires = {{'hrsh7th/cmp-nvim-lsp'}, {'hrsh7th/cmp-buffer'} }
-  }
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
+  use 'onsails/lspkind.nvim'
 
   -- Snippets
-  use 'hrsh7th/vim-vsnip'
-  use 'hrsh7th/vim-vsnip-integ'
+  use 'L3MON4D3/LuaSnip'
+  use 'saadparwaiz1/cmp_luasnip'
 
   -- Telescope
   use 'nvim-lua/popup.nvim'

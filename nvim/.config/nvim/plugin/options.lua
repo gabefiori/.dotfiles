@@ -39,18 +39,16 @@ opt.smartindent = true
 
 opt.swapfile = false
 opt.backup = false
-opt.hidden = true
 
 opt.ignorecase = true
 opt.smartcase = true
 opt.incsearch = true
-opt.hlsearch = true
+opt.hlsearch = false
 
 opt.splitright = true
 opt.splitbelow = true
 
-opt.shortmess = "c"
-
 opt.updatetime = 50
 
-opt.completeopt = {'menuone', 'noinsert', 'noselect'}
+opt.completeopt = { "menu", "menuone", "noselect" }
+opt.shortmess:append "c"
