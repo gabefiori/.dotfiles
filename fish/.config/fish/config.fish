@@ -1,3 +1,4 @@
+set fish_greeting ""
 set -U fish_user_paths /opt/homebrew/bin/ $fish_user_paths
 set -U fish_user_paths $HOME/.cargo/bin/ $fish_user_paths
 
@@ -9,6 +10,11 @@ alias cht="~/scripts/tmux-cht.sh"
 alias ts="~/scripts/tmux-sessionizer.sh"
 alias vim="nvim"
 alias cat="bat"
+
+if type -q exa
+  alias ll "exa -l -g --icons"
+  alias lla "ll -a"
+end
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
