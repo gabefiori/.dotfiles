@@ -8,11 +8,13 @@ g.netrw_liststyle=3
 g.netrw_browse_split = 0
 
 -- Theme
-g.backup = 'dark'
+opt.termguicolors = true
+g.background = 'dark'
 g.gruvbox_material_background = 'medium'
+g.gruvbox_material_foreground = 'original'
 g.gruvbox_material_enable_italic = 1
 g.gruvbox_material_better_performance = 1
-g.gruvbox_material_enable_bold = 0
+g.gruvbox_material_enable_bold = 1
 g.gruvbox_material_diagnostic_virtual_text = 1
 cmd 'colorscheme gruvbox-material' 
 
