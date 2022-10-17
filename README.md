@@ -1,5 +1,8 @@
 # Dotfiles
 
+![terminal screenshot](./images/terminal.png)
+![editor screenshot](./images/editor.png)
+
 I'm currently using MacOS and Ubuntu. These config files should work for both systems.
 You can manage them with [GNU Stow](https://www.gnu.org/software/stow/):
 
@@ -11,7 +14,8 @@ stow <package name> # set config files of a specific package
 
 ## Info:
 - Terminal: [Alacritty](https://alacritty.org/);
-- Shell: [ZSH](https://www.zsh.org/);
+- Shell: [Fish](https://fishshell.com);
+- Shell Prompt: [Startship](https://starship.rs);
 - Multiplexer: [Tmux](https://github.com/tmux/tmux);
 - Editor: [Neovim](https://neovim.io/);
 
@@ -22,8 +26,8 @@ To manage neovim plugins, you will need [Packer](https://github.com/wbthomason/p
 To manage ZSH plugins and themes, you will need [Oh My Zsh](https://ohmyz.sh/) installed.
 
 ## Issues:
-- ### nvm inside Fish
-  nvm won't work with fish. You can enter another shell and use nvm from there.
+- ### NVM inside Fish
+  NVM won't work with fish. You can enter another shell and use it from there.
 
 - ### Tmux italic text
   To enable italic text on Tmux, make sure to:
