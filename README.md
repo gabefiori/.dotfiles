@@ -1,8 +1,5 @@
 # Dotfiles
 
-![terminal screenshot](./images/terminal.png)
-![editor screenshot](./images/editor.png)
-
 I'm currently using MacOS and Ubuntu. These config files should work for both systems.
 You can manage them with [GNU Stow](https://www.gnu.org/software/stow/):
 
