@@ -22,6 +22,8 @@ To manage neovim plugins, you will need [Packer](https://github.com/wbthomason/p
 To manage ZSH plugins and themes, you will need [Oh My Zsh](https://ohmyz.sh/) installed.
 
 ## Issues:
+- ### nvm inside Fish
+  nvm won't work with fish. You can enter another shell and use nvm from there.
 
 - ### Tmux italic text
   To enable italic text on Tmux, make sure to:
