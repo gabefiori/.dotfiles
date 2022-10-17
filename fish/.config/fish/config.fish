@@ -10,6 +10,7 @@ alias cht="~/scripts/tmux-cht.sh"
 alias ts="~/scripts/tmux-sessionizer.sh"
 alias vim="nvim"
 alias cat="bat"
+alias lg="lazygit"
 
 if type -q exa
   alias ll "exa -l -g --icons"
