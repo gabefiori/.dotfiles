@@ -22,9 +22,6 @@ stow <package name> # set config files of a specific package
 ## Neovim:
 To manage neovim plugins, you will need [Packer](https://github.com/wbthomason/packer.nvim#quickstart) installed.
 
-## ZSH:
-To manage ZSH plugins and themes, you will need [Oh My Zsh](https://ohmyz.sh/) installed.
-
 ## Issues:
 - ### NVM inside Fish
   NVM won't work with fish. You can enter another shell and use it from there.
