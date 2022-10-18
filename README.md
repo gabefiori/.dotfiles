@@ -11,7 +11,7 @@ stow <package name> # set config files of a specific package
 
 ## Info:
 - Terminal: [Alacritty](https://alacritty.org/);
-- Shell: [Fish](https://fishshell.com);
+- Shell: [ZSH](https://www.zsh.org);
 - Shell Prompt: [Startship](https://starship.rs);
 - Multiplexer: [Tmux](https://github.com/tmux/tmux);
 - Editor: [Neovim](https://neovim.io/);
@@ -19,10 +19,15 @@ stow <package name> # set config files of a specific package
 ## Neovim:
 To manage neovim plugins, you will need [Packer](https://github.com/wbthomason/packer.nvim#quickstart) installed.
 
-## Issues:
-- ### NVM inside Fish
-  NVM won't work with fish. You can enter another shell and use it from there.
+## ZSH:
+To enable syntax highlighting
+```sh
+cd $HOME
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+```
 
+## Issues:
 - ### Tmux italic text
   To enable italic text on Tmux, make sure to:
   ```sh
