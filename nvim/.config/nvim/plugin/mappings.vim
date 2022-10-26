@@ -23,7 +23,7 @@ inoremap ! !<c-g>u
 inoremap ? ?<c-g>u
 
 " Git
-nnoremap <leader>gs <cmd>Neogit<cr>
+nnoremap <leader>gs <cmd>lua require('neogit').open()<cr>
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
