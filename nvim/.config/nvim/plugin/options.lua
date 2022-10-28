@@ -7,13 +7,29 @@ g.netrw_banner=0
 g.netrw_liststyle=3
 g.netrw_browse_split = 0
 
+-- Highlight on yank
+local autocmd = vim.api.nvim_create_autocmd
+
+autocmd('TextYankPost', {
+    group = yank_group,
+    pattern = '*',
+    callback = function()
+        vim.highlight.on_yank({
+            higroup = 'HighlightedyankRegion', -- gruvbox_material_visual color
+            -- higroup="IncSearch",            -- default
+            on_visual = true,
+            timeout = 60,
+        })
+    end,
+})
+
 -- Theme
 opt.termguicolors = true
 g.background = 'dark'
+g.gruvbox_material_visual = 'grey background'
 g.gruvbox_material_background = 'medium'
 g.gruvbox_material_foreground = 'original'
 g.gruvbox_material_enable_italic = 1
-g.gruvbox_material_better_performance = 1
 g.gruvbox_material_enable_bold = 1
 g.gruvbox_material_diagnostic_virtual_text = 1
 cmd 'colorscheme gruvbox-material' 
