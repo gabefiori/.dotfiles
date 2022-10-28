@@ -1,4 +1,4 @@
-colorscheme peachpuff
+colorscheme desert
 highlight Comment ctermfg=green
 
 let mapleader = "  "
@@ -11,8 +11,8 @@ set relativenumber
 set ruler
 
 set expandtab
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 
 set path+=**
 set wildmenu
