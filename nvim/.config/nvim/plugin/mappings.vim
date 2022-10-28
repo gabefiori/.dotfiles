@@ -29,15 +29,15 @@ nnoremap <leader>gs <cmd>lua require('neogit').open()<cr>
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+nnoremap <C-p> <cmd>lua require('telescope.builtin').git_files()<CR>
 
 " Harpon
-nnoremap <C-p> <cmd>lua require('telescope.builtin').git_files()<CR>
-nnoremap <C-m> <cmd>lua require('harpoon.mark').add_file()<CR>
-nnoremap <C-h> <cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>
-nnoremap <C-j> <cmd>lua require('harpoon.ui').nav_file(1)<CR>
-nnoremap <C-k> <cmd>lua require('harpoon.ui').nav_file(2)<CR>
-nnoremap <C-l> <cmd>lua require('harpoon.ui').nav_file(3)<CR>
-nnoremap <C-;> <cmd>lua require('harpoon.ui').nav_file(4)<CR>
+nnoremap <leader>m <cmd>lua require('harpoon.mark').add_file()<CR>
+nnoremap <leader>h <cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>
+nnoremap <leader>j <cmd>lua require('harpoon.ui').nav_file(1)<CR>
+nnoremap <leader>k <cmd>lua require('harpoon.ui').nav_file(2)<CR>
+nnoremap <leader>l <cmd>lua require('harpoon.ui').nav_file(3)<CR>
+nnoremap <leader>; <cmd>lua require('harpoon.ui').nav_file(4)<CR>
 
 " Trouble
 nnoremap <leader>xx <cmd>TroubleToggle<cr>
