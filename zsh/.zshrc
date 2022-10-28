@@ -24,12 +24,15 @@ setopt share_history          # share command history data
 ## Keybindings
 bindkey -v
 
-# Use vim keys in tab complete menu:
+## Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
+
+## Tmux Sessionizer
+bindkey -s ^f "~/scripts/tmux-sessionizer.sh\n"
 
 ## Edit command inside vim
 autoload edit-command-line; zle -N edit-command-line
