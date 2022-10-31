@@ -43,6 +43,4 @@ return require('packer').startup(function()
   use 'kyazdani42/nvim-web-devicons'
   use 'hoob3rt/lualine.nvim'
 
-  -- Autopairs
-  use 'windwp/nvim-autopairs'
 end)
