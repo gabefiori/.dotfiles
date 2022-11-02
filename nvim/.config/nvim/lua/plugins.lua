@@ -42,5 +42,6 @@ return require('packer').startup(function()
   use 'sainnhe/gruvbox-material'
   use 'kyazdani42/nvim-web-devicons'
   use 'hoob3rt/lualine.nvim'
+  use { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }
 
 end)
