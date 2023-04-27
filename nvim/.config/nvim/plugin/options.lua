@@ -3,9 +3,11 @@ local opt = vim.opt
 local g = vim.g
 
 --  Netrw
-g.netrw_banner=0
-g.netrw_liststyle=3
-g.netrw_browse_split = 0
+-- g.netrw_banner=0
+-- g.netrw_liststyle=3
+-- netrw_browse_split = 0
+g.loaded_netrw = 1
+g.loaded_netrwPlugin = 1
 
 -- Highlight on yank
 local autocmd = vim.api.nvim_create_autocmd
@@ -61,7 +63,7 @@ opt.backup = false
 opt.ignorecase = true
 opt.smartcase = true
 opt.incsearch = true
-opt.hlsearch = false
+opt.hlsearch = true
 
 opt.splitright = true
 opt.splitbelow = true

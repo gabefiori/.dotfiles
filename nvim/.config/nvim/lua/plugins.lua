@@ -1,47 +1,44 @@
-vim.cmd [[packadd packer.nvim]]
-
-return require('packer').startup(function()
-  -- Packer
-  use 'wbthomason/packer.nvim'
-
+require('lazy').setup({
   -- Languages
-  use 'neovim/nvim-lspconfig'
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use 'nvim-treesitter/nvim-treesitter-context'
-  use 'folke/trouble.nvim'
+   'neovim/nvim-lspconfig',
+   {'nvim-treesitter/nvim-treesitter', lazy = false, build = ':TSUpdate'},
+   'nvim-treesitter/nvim-treesitter-context',
+   'folke/trouble.nvim',
 
   -- Completion
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/nvim-cmp'
-  use 'onsails/lspkind.nvim'
+   'hrsh7th/cmp-nvim-lsp',
+   'hrsh7th/cmp-buffer',
+   'hrsh7th/cmp-path',
+   'hrsh7th/cmp-cmdline',
+   'hrsh7th/nvim-cmp',
+   'onsails/lspkind.nvim',
 
   -- Snippets
-  use 'L3MON4D3/LuaSnip'
-  use 'saadparwaiz1/cmp_luasnip'
+   'L3MON4D3/LuaSnip',
+   'saadparwaiz1/cmp_luasnip',
 
   -- Telescope
-  use 'nvim-lua/popup.nvim'
-  use 'nvim-lua/plenary.nvim'
-  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-  use 'nvim-telescope/telescope.nvim' 
+   'nvim-lua/popup.nvim',
+   'nvim-lua/plenary.nvim',
+   {'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+   'nvim-telescope/telescope.nvim', 
+
+   -- File Explorer
+   'nvim-tree/nvim-tree.lua',
 
   -- Harpoon
-  use 'ThePrimeagen/harpoon'
+   'ThePrimeagen/harpoon',
 
   -- Comments
-  use 'b3nj5m1n/kommentary'
+   'b3nj5m1n/kommentary',
 
   -- Git
-  use { 'TimUntersberger/neogit', requires = { 'nvim-lua/plenary.nvim' } }
-  use 'lewis6991/gitsigns.nvim'
+   'TimUntersberger/neogit',
+   'lewis6991/gitsigns.nvim',
 
-  -- Visual
-  use 'sainnhe/gruvbox-material'
-  use 'kyazdani42/nvim-web-devicons'
-  use 'hoob3rt/lualine.nvim'
-  use { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }
-
-end)
+   -- Visual
+   {'sainnhe/gruvbox-material', lazy = false },
+   'kyazdani42/nvim-web-devicons',
+   'hoob3rt/lualine.nvim',
+   'folke/todo-comments.nvim';
+})

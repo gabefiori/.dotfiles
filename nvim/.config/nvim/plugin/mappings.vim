@@ -1,5 +1,5 @@
 " File explorer
-nnoremap <C-n> :Explore<CR>
+nnoremap <C-n> :NvimTreeToggle<CR>
 
 " Delete buffer
 nnoremap <leader>k :bd<CR>
