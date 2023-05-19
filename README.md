@@ -16,9 +16,6 @@ stow <package name> # set config files of a specific package
 - Multiplexer: [Tmux](https://github.com/tmux/tmux);
 - Editor: [Neovim](https://neovim.io/);
 
-## Neovim:
-To manage neovim plugins, you will need [Packer](https://github.com/wbthomason/packer.nvim#quickstart) installed.
-
 ## ZSH:
 To enable syntax highlighting
 ```sh
