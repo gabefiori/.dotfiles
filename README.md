@@ -11,10 +11,14 @@ stow <package name> # set config files of a specific package
 
 ## Info:
 - Terminal: [Alacritty](https://alacritty.org/);
-- Shell: [ZSH](https://www.zsh.org);
+- Shell: [Fish](https://fishshell.com/);
 - Shell Prompt: [Startship](https://starship.rs);
 - Multiplexer: [Tmux](https://github.com/tmux/tmux);
 - Editor: [Neovim](https://neovim.io/);
+
+## Fish
+You should install a plugin manager for [Fish](https://fishshell.com/).
+See [Fish](https://fishshell.com/).
 
 ## ZSH:
 To enable syntax highlighting
