@@ -49,4 +49,7 @@ require('lazy').setup({
     'kyazdani42/nvim-web-devicons',
     'hoob3rt/lualine.nvim',
     'folke/todo-comments.nvim',
+
+    -- Copilot
+    'github/copilot.vim',
 })

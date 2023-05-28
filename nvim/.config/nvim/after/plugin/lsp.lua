@@ -7,17 +7,19 @@ lsp.setup_servers = ({ 'gopls', 'pyright', 'tsserver', 'intelephense', 'html', '
 local cmp = require('cmp')
 local _ = require('lsp-zero').cmp_action()
 
-cmp.setup({
-    sources = {
-        { name = 'path' },
-        { name = 'nvim_lsp' },
-        { name = 'buffer',  keyword_length = 3 },
-        { name = 'luasnip', keyword_length = 2 },
-    },
-    mapping = {
-        ['<CR>'] = cmp.mapping.confirm({ select = true }),
-        ['<C-Space>'] = cmp.mapping.complete(),
-    }
+local cmp_select = {behavior = cmp.SelectBehavior.Select}
+local cmp_mappings = lsp.defaults.cmp_mappings({
+  ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
+  ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
+  ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+  ["<C-Space>"] = cmp.mapping.complete(),
+})
+
+cmp_mappings['<Tab>'] = nil
+cmp_mappings['<S-Tab>'] = nil
+
+lsp.setup_nvim_cmp({
+  mapping = cmp_mappings
 })
 
 local on_attach = function(_, bufnr)
