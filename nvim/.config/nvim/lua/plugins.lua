@@ -45,7 +45,7 @@ require('lazy').setup({
     'lewis6991/gitsigns.nvim',
 
     -- Visual
-    { 'sainnhe/gruvbox-material', lazy = false },
+    { 'sainnhe/sonokai' },
     'kyazdani42/nvim-web-devicons',
     'hoob3rt/lualine.nvim',
     'folke/todo-comments.nvim',
