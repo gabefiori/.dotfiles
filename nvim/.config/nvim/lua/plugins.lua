@@ -47,7 +47,7 @@ require('lazy').setup({
     -- Visual
     { 'sainnhe/sonokai' },
     'kyazdani42/nvim-web-devicons',
-    'hoob3rt/lualine.nvim',
+    -- 'hoob3rt/lualine.nvim',
     'folke/todo-comments.nvim',
 
     -- Copilot
