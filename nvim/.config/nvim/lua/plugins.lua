@@ -7,7 +7,7 @@ require('lazy').setup({
             -- LSP Support
             { 'neovim/nvim-lspconfig' }, -- Required
             {
-                                   -- Optional
+                -- Optional
                 'williamboman/mason.nvim',
                 build = function()
                     pcall(vim.cmd, 'MasonUpdate')
@@ -16,9 +16,9 @@ require('lazy').setup({
             { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
             -- Autocompletion
-            { 'hrsh7th/nvim-cmp' }, -- Required
+            { 'hrsh7th/nvim-cmp' },     -- Required
             { 'hrsh7th/cmp-nvim-lsp' }, -- Required
-            { 'L3MON4D3/LuaSnip' }, -- Required
+            { 'L3MON4D3/LuaSnip' },     -- Required
         }
     },
     { 'nvim-treesitter/nvim-treesitter',          lazy = false,  build = ':TSUpdate' },
@@ -52,4 +52,9 @@ require('lazy').setup({
 
     -- Copilot
     'github/copilot.vim',
+
+    -- SQL
+    'tpope/vim-dadbod',
+    'kristijanhusak/vim-dadbod-ui',
+    'kristijanhusak/vim-dadbod-completion'
 })

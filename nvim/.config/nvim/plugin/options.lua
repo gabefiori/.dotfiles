@@ -1,4 +1,4 @@
-local cmd = vim.cmd 
+local cmd = vim.cmd
 local opt = vim.opt
 local g = vim.g
 
@@ -9,18 +9,17 @@ local g = vim.g
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
 
--- Highlight on yank
+local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
+local yank_group = augroup('HighlightYank', {})
 
 autocmd('TextYankPost', {
     group = yank_group,
     pattern = '*',
     callback = function()
         vim.highlight.on_yank({
-            higroup = 'HighlightedyankRegion', -- gruvbox_material_visual color
-            -- higroup="IncSearch",            -- default
-            on_visual = true,
-            timeout = 60,
+            higroup = 'IncSearch',
+            timeout = 40,
         })
     end,
 })
@@ -32,7 +31,7 @@ g.background = 'dark'
 cmd 'colorscheme sonokai'
 
 -- Main Configs
-opt.wildignore = {'**/node_modules/*', '**/.git/*'}
+opt.wildignore = {'**/node_modules/*', '**/.git/*', '*.lock'}
 
 opt.wrap = false
 opt.number = true
@@ -52,16 +51,22 @@ opt.smartindent = true
 
 opt.swapfile = false
 opt.backup = false
+opt.hidden = true
 
-opt.ignorecase = true
-opt.smartcase = true
 opt.incsearch = true
 opt.hlsearch = true
 
 opt.splitright = true
 opt.splitbelow = true
 
-opt.updatetime = 50
+opt.updatetime = 1000
 
-opt.completeopt = { "menu", "menuone", "noselect" }
-opt.shortmess:append "c"
+-- Undo
+opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+opt.undofile = true
+opt.undolevels = 500
+
+-- Cool floating window popup menu for completion on command line
+opt.pumblend = 15
+opt.wildmode = "longest:full"
+opt.wildoptions = "pum"
