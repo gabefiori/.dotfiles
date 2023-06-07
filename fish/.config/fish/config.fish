@@ -24,6 +24,8 @@ end
 
 fish_vi_key_bindings
 
+bind -M insert \cY accept-autosuggestion
+
 
 
 starship init fish | source
