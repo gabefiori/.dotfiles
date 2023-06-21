@@ -28,7 +28,16 @@ autocmd('TextYankPost', {
 opt.termguicolors = true
 g.background = 'dark'
 
-cmd 'colorscheme sonokai'
+g.gruvbox_material_visual = 'grey background'
+g.gruvbox_material_background = 'medium'
+g.gruvbox_material_ui_contrast = 'high'
+g.gruvbox_material_foreground = 'original'
+g.gruvbox_material_enable_italic = 1
+g.gruvbox_material_enable_bold = 1
+g.gruvbox_material_diagnostic_virtual_text = 'colored'
+g.gruvbox_material_better_performance = 1
+
+cmd 'colorscheme gruvbox-material'
 
 -- Main Configs
 opt.wildignore = {'**/node_modules/*', '**/.git/*', '*.lock'}
