@@ -26,7 +26,8 @@ fish_vi_key_bindings
 
 bind -M insert \cY accept-autosuggestion
 
-
+if test -d ~/.asdf
+    source ~/.asdf/asdf.fish
+end
 
 starship init fish | source
-
