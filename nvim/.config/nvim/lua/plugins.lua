@@ -31,9 +31,6 @@ require('lazy').setup({
     { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     'nvim-telescope/telescope.nvim',
 
-    -- File Explorer
-    'nvim-tree/nvim-tree.lua',
-
     -- Harpoon
     'ThePrimeagen/harpoon',
 

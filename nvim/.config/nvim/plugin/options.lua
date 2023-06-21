@@ -3,11 +3,9 @@ local opt = vim.opt
 local g = vim.g
 
 --  Netrw
--- g.netrw_banner=0
--- g.netrw_liststyle=3
--- netrw_browse_split = 0
-g.loaded_netrw = 1
-g.loaded_netrwPlugin = 1
+g.netrw_banner=0
+g.netrw_liststyle=3
+g.netrw_browse_split = 0
 
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
@@ -74,6 +72,8 @@ opt.updatetime = 1000
 opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 opt.undofile = true
 opt.undolevels = 500
+
+opt.fillchars = { eob = "~" }
 
 -- Cool floating window popup menu for completion on command line
 opt.pumblend = 15
