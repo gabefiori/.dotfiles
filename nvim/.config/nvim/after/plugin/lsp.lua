@@ -2,8 +2,6 @@ local lsp = require('lsp-zero')
 lsp.preset("recommended")
 lsp.nvim_workspace()
 
-lsp.setup_servers = ({ 'gopls', 'pyright', 'tsserver', 'intelephense', 'html', 'cssls', 'clangd', 'svelte' })
-
 local cmp = require('cmp')
 local _ = require('lsp-zero').cmp_action()
 
