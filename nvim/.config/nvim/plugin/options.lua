@@ -2,10 +2,24 @@ local cmd = vim.cmd
 local opt = vim.opt
 local g = vim.g
 
+-- Disable some built-in plugins
+g.loaded_gzip = 1
+g.loaded_zip = 1
+g.loaded_zipPlugin = 1
+g.loaded_tar = 1
+g.loaded_tarPlugin = 1
+
+g.loaded_getscript = 1
+g.loaded_getscriptPlugin = 1
+g.loaded_vimball = 1
+g.loaded_vimballPlugin = 1
+g.loaded_2html_plugin = 1
+
 --  Netrw
 g.netrw_banner=0
 g.netrw_liststyle=3
 g.netrw_browse_split = 0
+
 
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
