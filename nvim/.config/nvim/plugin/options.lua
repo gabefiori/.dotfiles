@@ -54,6 +54,8 @@ cmd 'colorscheme gruvbox-material'
 -- Main Configs
 opt.wildignore = {'**/node_modules/*', '**/.git/*', '*.lock'}
 
+opt.syntax = 'off'
+
 opt.wrap = false
 opt.number = true
 opt.relativenumber = true

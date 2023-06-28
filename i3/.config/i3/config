@@ -228,5 +228,6 @@ client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
 client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
 client.urgent           $red $red $white $red $red
 
-exec --no-startup-id picom -b
+# exec --no-startup-id picom -b
 exec --no-startup-id nitrogen --restore
+exec --no-startup-id redshift -l -20.6:-41.1 -m randr -P -t 6500:4100 -v -g 1
