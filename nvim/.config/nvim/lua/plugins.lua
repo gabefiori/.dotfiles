@@ -48,10 +48,5 @@ require('lazy').setup({
     'folke/todo-comments.nvim',
 
     -- Copilot
-    'github/copilot.vim',
-
-    -- SQL
-    'tpope/vim-dadbod',
-    'kristijanhusak/vim-dadbod-ui',
-    'kristijanhusak/vim-dadbod-completion'
+    -- 'github/copilot.vim',
 })
