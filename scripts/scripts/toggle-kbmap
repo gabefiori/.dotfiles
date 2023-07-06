@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
 if [ $(setxkbmap -query | grep -c "variant") -eq 0 ]; then
+    setxkbmap -option caps:swapescape
     setxkbmap us -variant intl
     notify-send "Keyboard Layout" "US International"
 else
+    setxkbmap -option caps:swapescape
     setxkbmap us
     notify-send "Keyboard Layout" "US"
 fi
