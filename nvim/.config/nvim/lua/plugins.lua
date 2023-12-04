@@ -1,29 +1,16 @@
 require('lazy').setup({
     -- Languages
-    {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v2.x',
-        dependencies = {
-            -- LSP Support
-            { 'neovim/nvim-lspconfig' }, -- Required
-            {
-                -- Optional
-                'williamboman/mason.nvim',
-                build = function()
-                    pcall(vim.cmd, 'MasonUpdate')
-                end,
-            },
-            { 'williamboman/mason-lspconfig.nvim' }, -- Optional
+    { 'williamboman/mason.nvim' },
+    { 'williamboman/mason-lspconfig.nvim' },
+    { 'VonHeikemen/lsp-zero.nvim',        branch = 'v3.x' },
+    { 'neovim/nvim-lspconfig' },
+    { 'hrsh7th/cmp-nvim-lsp' },
+    { 'hrsh7th/nvim-cmp' },
+    { 'L3MON4D3/LuaSnip' },
 
-            -- Autocompletion
-            { 'hrsh7th/nvim-cmp' },     -- Required
-            { 'hrsh7th/cmp-nvim-lsp' }, -- Required
-            { 'L3MON4D3/LuaSnip' },     -- Required
-        }
-    },
-    { 'nvim-treesitter/nvim-treesitter',          lazy = false,  build = ':TSUpdate' },
+    -- Tressiter
+    { 'nvim-treesitter/nvim-treesitter',  lazy = false,   build = ':TSUpdate' },
     'nvim-treesitter/nvim-treesitter-context',
-    'folke/trouble.nvim',
 
     -- Telescope
     'nvim-lua/popup.nvim',
@@ -42,9 +29,10 @@ require('lazy').setup({
     'lewis6991/gitsigns.nvim',
 
     -- Visual
-    { 'sainnhe/gruvbox-material', lazy = false },
+    { 'sainnhe/gruvbox-material',                 lazy = false },
     'kyazdani42/nvim-web-devicons',
     'hoob3rt/lualine.nvim',
+    'folke/trouble.nvim',
     'folke/todo-comments.nvim',
 
     -- Copilot
