@@ -41,7 +41,7 @@ opt.termguicolors = true
 g.background = 'dark'
 
 g.gruvbox_material_visual = 'grey background'
-g.gruvbox_material_background = 'medium'
+g.gruvbox_material_background = 'hard'
 g.gruvbox_material_ui_contrast = 'high'
 g.gruvbox_material_foreground = 'original'
 g.gruvbox_material_enable_italic = 1
@@ -62,7 +62,7 @@ opt.relativenumber = true
 opt.cursorline = true
 opt.signcolumn = "yes"
 opt.colorcolumn = "80"
-opt.guicursor = ''
+-- opt.guicursor = ''
 
 opt.expandtab = true
 opt.tabstop = 4
