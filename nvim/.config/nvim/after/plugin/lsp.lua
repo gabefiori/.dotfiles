@@ -12,7 +12,9 @@ local on_attach = function(_, bufnr)
 	vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
 	vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, opts)
 	vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, opts)
-	vim.keymap.set("n", "<space>fm", conform.format, opts)
+	vim.keymap.set("n", "<space>fm", function()
+		conform.format({ lsp_fallback = true, async = true })
+	end, opts)
 
 	-- Silent
 	opts.silent = true

@@ -4,7 +4,6 @@ require("conform").setup({
 		javascript = { "prettierd" },
 		json = { "jq" },
 		go = { "gofmt" },
-		php = { "phpcbf" },
 		rust = { "rustfmt" },
 	},
 })
