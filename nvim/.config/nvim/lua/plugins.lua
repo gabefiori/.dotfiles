@@ -20,7 +20,7 @@ require("lazy").setup({
 	"nvim-lua/popup.nvim",
 	"nvim-lua/plenary.nvim",
 	{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
-	"nvim-telescope/telescope.nvim",
+	{ "nvim-telescope/telescope.nvim", branch = "0.1.x" },
 
 	-- Harpoon
 	"ThePrimeagen/harpoon",
@@ -36,7 +36,6 @@ require("lazy").setup({
 	{ "sainnhe/gruvbox-material", lazy = false },
 	"kyazdani42/nvim-web-devicons",
 	"hoob3rt/lualine.nvim",
-	"folke/trouble.nvim",
 	"folke/todo-comments.nvim",
 
 	-- Copilot

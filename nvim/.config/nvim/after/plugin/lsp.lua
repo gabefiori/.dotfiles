@@ -5,7 +5,6 @@ local on_attach = function(_, bufnr)
 	local opts = { buffer = bufnr, remap = false }
 	vim.keymap.set("n", "<space>e", vim.diagnostic.open_float, opts)
 	vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
-	vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 	vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 	vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
 	vim.keymap.set("n", "<space>D", vim.lsp.buf.type_definition, opts)
@@ -15,10 +14,6 @@ local on_attach = function(_, bufnr)
 	vim.keymap.set("n", "<space>fm", function()
 		conform.format({ lsp_fallback = true, async = true })
 	end, opts)
-
-	-- Silent
-	opts.silent = true
-	vim.keymap.set("n", "gr", "<cmd>TroubleToggle lsp_references<cr>", opts)
 end
 
 lsp_zero.on_attach(on_attach)
