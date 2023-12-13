@@ -23,6 +23,9 @@ if status is-interactive
 end
 
 fish_vi_key_bindings
+fish_vi_cursor --force-iterm
+set -g fish_cursor_insert block
+set -g fish_cursor_default block
 
 bind -M insert \cY accept-autosuggestion
 
