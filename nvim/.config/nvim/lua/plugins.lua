@@ -28,6 +28,12 @@ require("lazy").setup({
 	-- Comments
 	"b3nj5m1n/kommentary",
 
+	-- Autopairs
+	{
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+	},
+
 	-- Git
 	"TimUntersberger/neogit",
 	"lewis6991/gitsigns.nvim",
