@@ -1,6 +1,5 @@
 # Dotfiles
-I'm currently using MacOS and Ubuntu. These config files should work for both systems.
-You can manage them with [GNU Stow](https://www.gnu.org/software/stow/):
+I'm currently using Ubuntu. You can manage my configs with [GNU Stow](https://www.gnu.org/software/stow/):
 
 ```sh
 stow */             # set config files of all packages
@@ -18,7 +17,11 @@ stow <package name> # set config files of a specific package
 
 ## Fish
 You should install a plugin manager for [Fish](https://fishshell.com/).
-See [Fish](https://fishshell.com/).
+See [Fisher](https://github.com/jorgebucaran/fisher).
+
+## Tmux
+You should install a plugin manager for [Tmux](https://github.com/tmux/tmux).
+See [TPM](https://github.com/tmux-plugins/tpm).
 
 ## ZSH:
 To enable syntax highlighting
