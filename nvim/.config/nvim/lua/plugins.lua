@@ -26,7 +26,11 @@ require("lazy").setup({
 	"ThePrimeagen/harpoon",
 
 	-- Comments
-	"b3nj5m1n/kommentary",
+	{
+		"numToStr/Comment.nvim",
+		opts = {},
+		lazy = false,
+	},
 
 	-- Autopairs
 	{
@@ -44,9 +48,9 @@ require("lazy").setup({
 	"hoob3rt/lualine.nvim",
 	"folke/todo-comments.nvim",
 
-    -- Tmux
-    "christoomey/vim-tmux-navigator",
+	-- Tmux
+	"christoomey/vim-tmux-navigator",
 
 	-- Copilot
-	'github/copilot.vim',
+	"github/copilot.vim",
 })
