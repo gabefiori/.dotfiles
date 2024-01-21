@@ -45,8 +45,8 @@ require("lazy").setup({
 	"folke/todo-comments.nvim",
 
     -- Tmux
-    "christoomey/vim-tmux-navigator"
+    "christoomey/vim-tmux-navigator",
 
 	-- Copilot
-	-- 'github/copilot.vim',
+	'github/copilot.vim',
 })
