@@ -22,6 +22,9 @@ require("lazy").setup({
 	{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 	{ "nvim-telescope/telescope.nvim", branch = "0.1.x" },
 
+	-- File explorer
+	{ "echasnovski/mini.files", version = false },
+
 	-- Harpoon
 	"ThePrimeagen/harpoon",
 
