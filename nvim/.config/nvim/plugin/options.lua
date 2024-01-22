@@ -30,6 +30,7 @@ g.gruvbox_material_visual = "grey background"
 g.gruvbox_material_background = "hard"
 g.gruvbox_material_ui_contrast = "high"
 g.gruvbox_material_foreground = "original"
+g.gruvbox_material_statusline_style = "original"
 g.gruvbox_material_enable_italic = 0
 g.gruvbox_material_enable_bold = 0
 g.gruvbox_material_disable_italic_comment = 1
