@@ -20,7 +20,7 @@ require("lazy").setup({
 	"nvim-lua/popup.nvim",
 	"nvim-lua/plenary.nvim",
 	{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
-	{ "nvim-telescope/telescope.nvim", branch = "0.1.x" },
+	{ "nvim-telescope/telescope.nvim", branch = "0.1.x", lazy = true },
 
 	-- File explorer
 	{ "echasnovski/mini.files", version = false },
@@ -28,6 +28,7 @@ require("lazy").setup({
 	-- Harpoon
 	{
 		"ThePrimeagen/harpoon",
+        lazy = true,
 		branch = "harpoon2",
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
@@ -46,14 +47,14 @@ require("lazy").setup({
 	},
 
 	-- Git
-	"TimUntersberger/neogit",
-	"lewis6991/gitsigns.nvim",
+	{"TimUntersberger/neogit", lazy = true},
+    {"lewis6991/gitsigns.nvim", lazy = true},
 
 	-- Visual
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-	"kyazdani42/nvim-web-devicons",
-	"hoob3rt/lualine.nvim",
-	"folke/todo-comments.nvim",
+	{"kyazdani42/nvim-web-devicons", lazy = true},
+	{"hoob3rt/lualine.nvim", lazy = true},
+	{"folke/todo-comments.nvim", lazy = true},
 
 	-- Tmux
 	"christoomey/vim-tmux-navigator",
