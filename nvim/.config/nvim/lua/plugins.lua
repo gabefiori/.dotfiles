@@ -26,7 +26,11 @@ require("lazy").setup({
 	{ "echasnovski/mini.files", version = false },
 
 	-- Harpoon
-	"ThePrimeagen/harpoon",
+	{
+		"ThePrimeagen/harpoon",
+		branch = "harpoon2",
+		dependencies = { "nvim-lua/plenary.nvim" },
+	},
 
 	-- Comments
 	{
@@ -46,7 +50,7 @@ require("lazy").setup({
 	"lewis6991/gitsigns.nvim",
 
 	-- Visual
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	"kyazdani42/nvim-web-devicons",
 	"hoob3rt/lualine.nvim",
 	"folke/todo-comments.nvim",
