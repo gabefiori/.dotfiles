@@ -2,6 +2,8 @@ set fish_greeting ""
 set -gx EDITOR nvim
 set -U fish_user_paths /opt/homebrew/bin/ $fish_user_paths
 set -U fish_user_paths $HOME/.cargo/bin/ $fish_user_paths
+set -U fish_user_paths /usr/local/go/bin $fish_user_paths
+set -U fish_user_paths $HOME/go/bin $fish_user_paths
 
 alias sp='cd "$(find ~/projects/ -mindepth 1 -maxdepth 1 -type d | fzf)"'
 alias ll="ls -l"
