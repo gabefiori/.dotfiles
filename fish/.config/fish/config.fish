@@ -35,4 +35,8 @@ if test -d ~/.asdf
     source ~/.asdf/asdf.fish
 end
 
+if test -d $HOME/.opam/opam-init
+    source $HOME/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+end
+
 starship init fish | source

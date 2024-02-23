@@ -1,5 +1,4 @@
 local lsp_zero = require("lsp-zero")
-local conform = require("conform")
 
 local on_attach = function(_, bufnr)
 	local opts = { buffer = bufnr, remap = false }
@@ -11,9 +10,7 @@ local on_attach = function(_, bufnr)
 	vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
 	vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, opts)
 	vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, opts)
-	vim.keymap.set("n", "<space>fm", function()
-		conform.format({ lsp_fallback = true, async = true })
-	end, opts)
+	vim.keymap.set("n", "<space>fm", vim.lsp.buf.format, opts)
 end
 
 lsp_zero.on_attach(on_attach)

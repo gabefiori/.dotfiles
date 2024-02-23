@@ -1,0 +1,61 @@
+#!/bin/bash
+
+DEFAULT_INTERVAL=30
+DEFAULT_ACTION="both"
+
+move_mouse() {
+    xdotool mousemove_relative --polar 0 10
+}
+
+press_shift() {
+    xdotool keydown Shift
+    sleep 1
+    xdotool keyup Shift
+}
+
+if ! command -v xdotool &> /dev/null; then
+    echo "Error: xdotool is not installed. Please install it before running this script."
+    exit 1
+fi
+
+interval=$DEFAULT_INTERVAL
+action=$DEFAULT_ACTION
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        mouse)
+            action="mouse"
+            ;;
+        kb | keyboard)
+            action="kb"
+            ;;
+        both)
+            action="both"
+            ;;
+        -i | --interval)
+            shift
+            interval=$1
+            ;;
+        *)
+            echo "Invalid option: $1. Usage: $0 [mouse|kb|both] [-i INTERVAL]"
+            exit 1
+            ;;
+    esac
+    shift
+done
+
+while true; do
+    case $action in
+        mouse)
+            move_mouse
+            ;;
+        kb)
+            press_shift
+            ;;
+        both)
+            move_mouse
+            press_shift
+            ;;
+    esac
+
+    sleep $interval
+done

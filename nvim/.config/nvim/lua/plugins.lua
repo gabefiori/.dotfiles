@@ -4,10 +4,7 @@ require("lazy").setup({
 	{ "williamboman/mason-lspconfig.nvim" },
 	{ "VonHeikemen/lsp-zero.nvim", branch = "v3.x" },
 	{ "neovim/nvim-lspconfig" },
-	{
-		"stevearc/conform.nvim",
-		opts = {},
-	},
+	{ "nvimtools/none-ls.nvim" },
 	{ "hrsh7th/cmp-nvim-lsp" },
 	{ "hrsh7th/nvim-cmp" },
 	{ "L3MON4D3/LuaSnip" },
@@ -28,7 +25,7 @@ require("lazy").setup({
 	-- Harpoon
 	{
 		"ThePrimeagen/harpoon",
-        lazy = true,
+		lazy = true,
 		branch = "harpoon2",
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
@@ -47,14 +44,14 @@ require("lazy").setup({
 	},
 
 	-- Git
-	{"TimUntersberger/neogit", lazy = true},
-    {"lewis6991/gitsigns.nvim", lazy = true},
+	{ "TimUntersberger/neogit", lazy = true },
+	{ "lewis6991/gitsigns.nvim", lazy = true },
 
 	-- Visual
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-	{"kyazdani42/nvim-web-devicons", lazy = true},
-	{"hoob3rt/lualine.nvim", lazy = true},
-	{"folke/todo-comments.nvim", lazy = true},
+	{ "kyazdani42/nvim-web-devicons", lazy = true },
+	{ "hoob3rt/lualine.nvim", lazy = true },
+	{ "folke/todo-comments.nvim", lazy = true },
 
 	-- Tmux
 	"christoomey/vim-tmux-navigator",
