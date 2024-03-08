@@ -53,11 +53,11 @@ require("lazy").setup({
     { "TimUntersberger/neogit",       lazy = true },
     { "lewis6991/gitsigns.nvim",      lazy = true },
 
-    -- Visual
-    { "catppuccin/nvim",              name = "catppuccin", priority = 1000 },
-    { "kyazdani42/nvim-web-devicons", lazy = true },
-    { "hoob3rt/lualine.nvim",         lazy = true },
-    { "folke/todo-comments.nvim",     lazy = true },
+	-- Visual
+	{ "sainnhe/gruvbox-material", lazy = false },
+	"kyazdani42/nvim-web-devicons",
+	"hoob3rt/lualine.nvim",
+	"folke/todo-comments.nvim",
 
     -- Tmux
     "christoomey/vim-tmux-navigator",
