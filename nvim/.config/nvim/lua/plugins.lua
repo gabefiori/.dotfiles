@@ -1,61 +1,67 @@
 require("lazy").setup({
-	-- Languages
-	{ "williamboman/mason.nvim" },
-	{ "williamboman/mason-lspconfig.nvim" },
-	{ "VonHeikemen/lsp-zero.nvim", branch = "v3.x" },
-	{ "neovim/nvim-lspconfig" },
-	{ "nvimtools/none-ls.nvim" },
-	{ "hrsh7th/cmp-nvim-lsp" },
-	{ "hrsh7th/nvim-cmp" },
-	{ "L3MON4D3/LuaSnip" },
+    -- Languages
+    { "williamboman/mason.nvim" },
+    { "williamboman/mason-lspconfig.nvim" },
+    { "VonHeikemen/lsp-zero.nvim",        branch = "v3.x" },
+    { "neovim/nvim-lspconfig" },
+    { "nvimtools/none-ls.nvim" },
+    { "hrsh7th/cmp-nvim-lsp" },
+    { "hrsh7th/nvim-cmp" },
+    { "L3MON4D3/LuaSnip" },
 
-	-- Tressiter
-	{ "nvim-treesitter/nvim-treesitter", lazy = false, build = ":TSUpdate" },
-	"nvim-treesitter/nvim-treesitter-context",
+    -- Trouble
+    {
+        "folke/trouble.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+    },
 
-	-- Telescope
-	"nvim-lua/popup.nvim",
-	"nvim-lua/plenary.nvim",
-	{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
-	{ "nvim-telescope/telescope.nvim", branch = "0.1.x", lazy = true },
+    -- Tressiter
+    { "nvim-treesitter/nvim-treesitter",          lazy = false,     build = ":TSUpdate" },
+    "nvim-treesitter/nvim-treesitter-context",
 
-	-- File explorer
-	{ "echasnovski/mini.files", version = false },
+    -- Telescope
+    "nvim-lua/popup.nvim",
+    "nvim-lua/plenary.nvim",
+    { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+    { "nvim-telescope/telescope.nvim",            branch = "0.1.x", lazy = true },
 
-	-- Harpoon
-	{
-		"ThePrimeagen/harpoon",
-		lazy = true,
-		branch = "harpoon2",
-		dependencies = { "nvim-lua/plenary.nvim" },
-	},
+    -- File explorer
+    { "echasnovski/mini.files",                   version = false },
 
-	-- Comments
-	{
-		"numToStr/Comment.nvim",
-		opts = {},
-		lazy = false,
-	},
+    -- Harpoon
+    {
+        "ThePrimeagen/harpoon",
+        lazy = true,
+        branch = "harpoon2",
+        dependencies = { "nvim-lua/plenary.nvim" },
+    },
 
-	-- Autopairs
-	{
-		"windwp/nvim-autopairs",
-		event = "InsertEnter",
-	},
+    -- Comments
+    {
+        "numToStr/Comment.nvim",
+        opts = {},
+        lazy = false,
+    },
 
-	-- Git
-	{ "TimUntersberger/neogit", lazy = true },
-	{ "lewis6991/gitsigns.nvim", lazy = true },
+    -- Autopairs
+    {
+        "windwp/nvim-autopairs",
+        event = "InsertEnter",
+    },
 
-	-- Visual
-	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-	{ "kyazdani42/nvim-web-devicons", lazy = true },
-	{ "hoob3rt/lualine.nvim", lazy = true },
-	{ "folke/todo-comments.nvim", lazy = true },
+    -- Git
+    { "TimUntersberger/neogit",       lazy = true },
+    { "lewis6991/gitsigns.nvim",      lazy = true },
 
-	-- Tmux
-	"christoomey/vim-tmux-navigator",
+    -- Visual
+    { "catppuccin/nvim",              name = "catppuccin", priority = 1000 },
+    { "kyazdani42/nvim-web-devicons", lazy = true },
+    { "hoob3rt/lualine.nvim",         lazy = true },
+    { "folke/todo-comments.nvim",     lazy = true },
 
-	-- Copilot
-	"github/copilot.vim",
+    -- Tmux
+    "christoomey/vim-tmux-navigator",
+
+    -- Copilot
+    "github/copilot.vim"
 })
