@@ -106,15 +106,10 @@ install-nodejs:
 .PHONY: install-golang
 install-golang:
 	@echo "Installing Golang..."
-	@if ! command -v asdf > /dev/null; then \
-		echo "asdf is not installed. Installing asdf..."; \
-		$(MAKE) install-asdf; \
-	fi
-	@fish -c 'asdf plugin add golang https://github.com/asdf-community/asdf-golang.git && \
-	asdf install golang latest && \
-	asdf global golang latest && \
-	source ~/.asdf/plugins/golang/set-env.fish && \
-	asdf reshim golang'
+	curl -fsSL -o go.tar.gz https://go.dev/dl/go1.22.0.linux-amd64.tar.gz && \
+	sudo rm -rf /usr/local/go && \
+	sudo tar -C /usr/local -xzf go.tar.gz && \
+	rm go.tar.gz
 
 .PHONY: install-lang
 install-lang: install-python install-nodejs install-golang
