@@ -61,7 +61,4 @@ require("lazy").setup({
 
     -- Tmux
     "christoomey/vim-tmux-navigator",
-
-    -- Copilot
-    "github/copilot.vim"
 })
