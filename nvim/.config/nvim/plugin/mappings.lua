@@ -13,3 +13,7 @@ vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 vim.keymap.set("n", "<leader>gs", "<cmd>lua require('neogit').open()<CR>")
+
+vim.keymap.set("n", "<leader>uh", function()
+    vim.lsp.inlay_hint.enable(0, not vim.lsp.inlay_hint.is_enabled(0))
+end)

@@ -2,12 +2,12 @@ require("lazy").setup({
     -- Languages
     { "williamboman/mason.nvim" },
     { "williamboman/mason-lspconfig.nvim" },
-    { "VonHeikemen/lsp-zero.nvim",        branch = "v3.x" },
     { "neovim/nvim-lspconfig" },
     { "nvimtools/none-ls.nvim" },
     { "hrsh7th/cmp-nvim-lsp" },
     { "hrsh7th/nvim-cmp" },
     { "L3MON4D3/LuaSnip" },
+    { "saadparwaiz1/cmp_luasnip" },
 
     -- Trouble
     {
@@ -50,14 +50,14 @@ require("lazy").setup({
     },
 
     -- Git
-    { "TimUntersberger/neogit",       lazy = true },
-    { "lewis6991/gitsigns.nvim",      lazy = true },
+    { "TimUntersberger/neogit",   lazy = true },
+    { "lewis6991/gitsigns.nvim",  lazy = true },
 
-	-- Visual
-	{ "sainnhe/gruvbox-material", lazy = false },
-	"kyazdani42/nvim-web-devicons",
-	"hoob3rt/lualine.nvim",
-	"folke/todo-comments.nvim",
+    -- Visual
+    { "sainnhe/gruvbox-material", lazy = false },
+    "kyazdani42/nvim-web-devicons",
+    "hoob3rt/lualine.nvim",
+    "folke/todo-comments.nvim",
 
     -- Tmux
     "christoomey/vim-tmux-navigator",
