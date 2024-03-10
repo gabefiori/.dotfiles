@@ -26,7 +26,11 @@ require("lazy").setup({
     { "nvim-telescope/telescope.nvim",            branch = "0.1.x", lazy = true },
 
     -- File explorer
-    { "echasnovski/mini.files",                   version = false },
+    {
+        'stevearc/oil.nvim',
+        opts = {},
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+    },
 
     -- Harpoon
     {
