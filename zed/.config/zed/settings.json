@@ -1,0 +1,49 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+
+  "base_keymap": "VSCode",
+  "format_on_save": "off",
+  "vim_mode": true,
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "buffer_font_family": "Berkeley Mono",
+  "cursor_blink": false,
+  "relative_line_numbers": true,
+  "scrollbar": { "show": "never" },
+  "vertical_scroll_margin": 0,
+  "gutter": {
+    "line_numbers": true
+  },
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Gruvbox Dark Hard"
+  },
+
+  "tab_bar": {
+    "show": false
+  },
+
+  "command_aliases": {
+    "W": "w",
+    "Wq": "wq",
+    "Q": "q"
+  },
+
+  "languages": {
+    "PHP": {
+      "language_servers": ["intelephense"]
+    }
+  }
+}
