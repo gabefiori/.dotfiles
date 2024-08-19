@@ -32,8 +32,8 @@ g.gruvbox_material_ui_contrast = "high"
 g.gruvbox_material_foreground = "original"
 g.gruvbox_material_statusline_style = "original"
 g.gruvbox_material_enable_italic = 0
-g.gruvbox_material_enable_bold = 0
-g.gruvbox_material_disable_italic_comment = 1
+g.gruvbox_material_enable_bold = 1
+g.gruvbox_material_disable_italic_comment = 0
 g.gruvbox_material_diagnostic_virtual_text = "colored"
 g.gruvbox_material_better_performance = 1
 
