@@ -54,14 +54,14 @@ require("lazy").setup({
     },
 
     -- Git
-    { "TimUntersberger/neogit",   lazy = true },
-    { "lewis6991/gitsigns.nvim",  lazy = true },
+    { "TimUntersberger/neogit",  lazy = true },
+    { "lewis6991/gitsigns.nvim", lazy = true },
 
     -- Visual
-    { "sainnhe/gruvbox-material", lazy = false },
     "kyazdani42/nvim-web-devicons",
     "hoob3rt/lualine.nvim",
     "folke/todo-comments.nvim",
+    "nyoom-engineering/oxocarbon.nvim",
 
     -- Tmux
     "christoomey/vim-tmux-navigator",

@@ -26,18 +26,7 @@ autocmd("TextYankPost", {
 opt.termguicolors = true
 g.background = "dark"
 
-g.gruvbox_material_visual = "grey background"
-g.gruvbox_material_background = "hard"
-g.gruvbox_material_ui_contrast = "high"
-g.gruvbox_material_foreground = "original"
-g.gruvbox_material_statusline_style = "original"
-g.gruvbox_material_enable_italic = 0
-g.gruvbox_material_enable_bold = 1
-g.gruvbox_material_disable_italic_comment = 0
-g.gruvbox_material_diagnostic_virtual_text = "colored"
-g.gruvbox_material_better_performance = 1
-
-cmd("colorscheme gruvbox-material")
+cmd("colorscheme oxocarbon")
 
 -- Main Configs
 opt.wildignore = { "**/node_modules/*", "**/.git/*", "*.lock" }
