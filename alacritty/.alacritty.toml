@@ -4,7 +4,10 @@ foreground = "#ffffff"
 
 [colors.search]
 matches = { foreground = "CellBackground", background = "#ee5396"}
-footer_bar = { foreground = "#ffffff", background = "#262626"}
+
+[colors.footer_bar]
+foreground = "#ffffff"
+background = "#262626"
 
 [colors.normal]
 black = "#262626"
