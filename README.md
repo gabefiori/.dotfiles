@@ -9,7 +9,7 @@ stow <package name> # set config files of a specific package
 
 ## Info:
 - Window Manager: [i3](https://i3wm.org/);
-- Terminal: [Kitty](https://sw.kovidgoyal.net/kitty/);
+- Terminal: [Alacritty](https://alacritty.org/);
 - Shell: [Fish](https://fishshell.com/);
 - Shell Prompt: [Startship](https://starship.rs);
 - Multiplexer: [Tmux](https://github.com/tmux/tmux);
