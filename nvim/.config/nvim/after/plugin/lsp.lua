@@ -20,6 +20,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end,
 })
 
+vim.diagnostic.config({
+    virtual_text = true,
+})
+
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 
@@ -71,28 +75,4 @@ require("mason-lspconfig").setup({
     },
 })
 
-local cmp = require("cmp")
-local cmp_select = { behavior = cmp.SelectBehavior.Select }
-
-cmp.setup({
-    snippet = {
-        expand = function(args)
-            require('luasnip').lsp_expand(args.body)
-        end,
-    },
-    sources = {
-        { name = "path" },
-        { name = "nvim_lsp" },
-        { name = " luasnip" }
-    },
-    mapping = cmp.mapping.preset.insert({
-        ["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
-        ["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
-        ["<C-y>"] = cmp.mapping.confirm({ select = true }),
-        ["<C-Space>"] = cmp.mapping.complete(),
-    }),
-})
-
-vim.diagnostic.config({
-    virtual_text = true,
-})
+require("lspconfig").gleam.setup({})
