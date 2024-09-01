@@ -7,26 +7,9 @@ g.netrw_banner = 0
 g.netrw_liststyle = 3
 g.netrw_browse_split = 0
 
-local augroup = vim.api.nvim_create_augroup
-local autocmd = vim.api.nvim_create_autocmd
-local yank_group = augroup("HighlightYank", {})
-
-autocmd("TextYankPost", {
-	group = yank_group,
-	pattern = "*",
-	callback = function()
-		vim.highlight.on_yank({
-			higroup = "IncSearch",
-			timeout = 40,
-		})
-	end,
-})
-
 -- Theme
 opt.termguicolors = true
 g.background = "dark"
-
-cmd("colorscheme oxocarbon")
 
 -- Main Configs
 opt.wildignore = { "**/node_modules/*", "**/.git/*", "*.lock" }
@@ -59,14 +42,14 @@ opt.hlsearch = true
 opt.splitright = true
 opt.splitbelow = true
 
+opt.inccommand = "split"
+
 opt.updatetime = 1000
 
 -- Undo
 opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 opt.undofile = true
 opt.undolevels = 500
-
-opt.fillchars = { eob = "~" }
 
 -- Cool floating window popup menu for completion on command line
 opt.pumblend = 15
