@@ -1,0 +1,16 @@
+{
+  "targets": [
+    {
+      "path": "~/Programming",
+      "depth": 1
+    },
+    {
+      "path": "~/.dotfiles",
+      "depth": 1
+    },
+    {
+      "path": "~/Notes",
+      "depth": 0
+    }
+  ]
+}
