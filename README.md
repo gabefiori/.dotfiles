@@ -15,17 +15,6 @@ stow <package name> # set config files of a specific package
 - Multiplexer: [Tmux](https://github.com/tmux/tmux);
 - Editor: [Neovim](https://neovim.io/);
 
-## Fish
-You should install a plugin manager for [Fish](https://fishshell.com/).
-See [Fisher](https://github.com/jorgebucaran/fisher).
-
 ## Tmux
 You should install a plugin manager for [Tmux](https://github.com/tmux/tmux).
 See [TPM](https://github.com/tmux-plugins/tpm).
-
-## ZSH:
-To enable syntax highlighting
-```sh
-cd $HOME
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-```
