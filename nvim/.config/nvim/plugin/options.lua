@@ -50,8 +50,3 @@ opt.updatetime = 1000
 opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 opt.undofile = true
 opt.undolevels = 500
-
--- Cool floating window popup menu for completion on command line
-opt.pumblend = 15
-opt.wildmode = "longest:full"
-opt.wildoptions = "pum"
