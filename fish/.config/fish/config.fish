@@ -7,8 +7,8 @@ set -U fish_user_paths $HOME/go/bin $fish_user_paths
 
 alias ll "ls -l"
 alias g "git"
+alias gu "gitui"
 alias vim "nvim"
-alias lg "lazygit"
 
 if type -q bat
     alias cat "bat"
