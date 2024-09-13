@@ -56,10 +56,6 @@ return {
                         server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
                         require('lspconfig')[server_name].setup(server)
                     end,
-                    -- NOTE: temporary fix
-                    tsserver = function()
-                        require('lspconfig').ts_ls.setup({})
-                    end,
                 },
             })
 

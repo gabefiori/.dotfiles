@@ -4,6 +4,13 @@
 
 [include]
   path = ~/.gitconfig.local
+
+[includeIf "gitdir:~/Programming/personal/"]
+    path = ~/.gitconfig.personal
+
+[includeIf "gitdir:~/.dotfiles/"]
+    path = ~/.gitconfig.personal
+
 [core]
 	editor = vim
     pager = delta
