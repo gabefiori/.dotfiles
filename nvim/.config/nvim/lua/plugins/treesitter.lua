@@ -7,32 +7,20 @@ return {
                 ensure_installed = {
                     "bash",
                     "c",
-                    "clojure",
-                    "cmake",
+                    "zig",
                     "comment",
-                    "cpp",
-                    "css",
                     "dockerfile",
-                    "elm",
                     "go",
-                    "html",
-                    "http",
                     "javascript",
                     "jsdoc",
                     "lua",
                     "make",
                     "markdown",
                     "php",
-                    "python",
-                    "regex",
                     "rust",
-                    "scala",
-                    "scss",
                     "toml",
-                    "tsx",
                     "typescript",
                     "vim",
-                    "yaml",
                 },
                 auto_install = true,
                 sync_install = false,
@@ -42,9 +30,5 @@ return {
                 },
             })
         end
-    },
-    {
-        "nvim-treesitter/nvim-treesitter-context"
     }
-
 }

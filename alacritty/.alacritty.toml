@@ -1,33 +1,54 @@
-[colors.primary]
-background = "#161616"
-foreground = "#ffffff"
+[[colors.indexed_colors]]
+color = "#fe8019"
+index = 16
 
-[colors.search]
-matches = { foreground = "CellBackground", background = "#ee5396"}
+[[colors.indexed_colors]]
+color = "#d65d0e"
+index = 17
 
-[colors.footer_bar]
-foreground = "#ffffff"
-background = "#262626"
+[[colors.indexed_colors]]
+color = "#3c3836"
+index = 18
 
-[colors.normal]
-black = "#262626"
-magenta = "#ff7eb6"
-green = "#42be65"
-yellow = "#ffe97b"
-blue = "#33b1ff"
-red = "#ee5396"
-cyan = "#3ddbd9"
-white = "#dde1e6"
+[[colors.indexed_colors]]
+color = "#504945"
+index = 19
+
+[[colors.indexed_colors]]
+color = "#bdae93"
+index = 20
+
+[[colors.indexed_colors]]
+color = "#ebdbb2"
+index = 21
 
 [colors.bright]
-black = "#393939"
-magenta = "#ff7eb6"
-green = "#42be65"
-yellow = "#ffe97b"
-blue = "#33b1ff"
-red = "#ee5396"
-cyan = "#3ddbd9"
-white = "#ffffff"
+black = "0x665c54"
+blue = "0xbdae93"
+cyan = "0xd65d0e"
+green = "0x3c3836"
+magenta = "0xebdbb2"
+red = "0xfe8019"
+white = "0xfbf1c7"
+yellow = "0x504945"
+
+[colors.cursor]
+cursor = "0xd5c4a1"
+text = "0x1d2021"
+
+[colors.normal]
+black = "0x1d2021"
+blue = "0x83a598"
+cyan = "0x8ec07c"
+green = "0xb8bb26"
+magenta = "0xd3869b"
+red = "0xfb4934"
+white = "0xd5c4a1"
+yellow = "0xfabd2f"
+
+[colors.primary]
+background = "0x1d2021"
+foreground = "0xd5c4a1"
 
 [env]
 TERM = "xterm-256color"
