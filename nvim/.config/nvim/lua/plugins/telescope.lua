@@ -18,14 +18,6 @@ return {
                 filesize_limite = 5,
                 treesitter = true,
             },
-            -- pickers = {
-            --     find_files = { theme = "ivy" },
-            --     git_files = { theme = "ivy" },
-            --     diagnostics = { theme = "ivy" },
-            --     lsp_definitions = { theme = "ivy" },
-            --     lsp_references = { theme = "ivy" },
-            --     live_grep = { theme = "ivy" },
-            -- },
             extensions = {
                 fzf = {
                     fuzzy = true,

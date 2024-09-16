@@ -76,6 +76,7 @@ return {
                     vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, { buffer = 0 })
                     vim.keymap.set("n", "<space>wd", builtin.lsp_document_symbols, { buffer = 0 })
                     vim.keymap.set("n", "<space>e", vim.diagnostic.open_float, { buffer = 0 })
+                    vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, { buffer = 0 })
                     vim.keymap.set("n", "<space>fm", vim.lsp.buf.format, { buffer = 0 })
                 end,
             })

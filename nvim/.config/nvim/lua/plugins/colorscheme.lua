@@ -1,42 +1,39 @@
 return {
     -- {
-    --     "nyoom-engineering/oxocarbon.nvim",
-    --     config = function()
-    --          vim.cmd("colorscheme oxocarbon")
-    --     end
-    -- },
-    -- {
     --     "rebelot/kanagawa.nvim",
     --     config = function()
     --         require('kanagawa').setup({
-    --             compile = true, -- enable compiling the colorscheme
+    --             compile = false,   -- enable compiling the colorscheme
     --             undercurl = true, -- enable undercurls
     --             commentStyle = { italic = false },
     --             functionStyle = {},
     --             keywordStyle = { italic = false },
     --             statementStyle = { bold = false },
     --             typeStyle = {},
-    --             transparent = false, -- do not set background color
-    --             dimInactive = false, -- dim inactive window `:h hl-NormalNC`
+    --             transparent = false,   -- do not set background color
+    --             dimInactive = false,   -- dim inactive window `:h hl-NormalNC`
     --             terminalColors = true, -- define vim.g.terminal_color_{0,17}
-    --             colors = { -- add/modify theme and palette colors
+    --             colors = {             -- add/modify theme and palette colors
     --                 palette = {},
-    --                 theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
+    --                 theme = {
+    --                     all = {
+    --                         ui = {
+    --                             bg_gutter = "none"
+    --                         }
+    --                     }
+    --                 },
     --             },
     --             overrides = function(colors) -- add/modify highlights
     --                 return {}
     --             end,
-    --             theme = "dragon", -- Load "wave" theme when 'background' option is not set
-    --             background = { -- map the value of 'background' option to a theme
-    --                 dark = "wave", -- try "dragon" !
+    --             theme = "dragon",    -- Load "wave" theme when 'background' option is not set
+    --             background = {       -- map the value of 'background' option to a theme
+    --                 dark = "dragon", -- try "dragon" !
     --                 light = "lotus"
     --             },
     --         })
-    --
-    --         -- setup must be called before loading
-    --         vim.cmd("colorscheme kanagawa")
     --     end
-    -- }
+    -- },
     {
         'sainnhe/gruvbox-material',
         lazy = false,
@@ -54,5 +51,30 @@ return {
 
             vim.cmd.colorscheme('gruvbox-material')
         end
-    }
+    },
+    -- {
+    --     "EdenEast/nightfox.nvim",
+    --     config = function ()
+    --        require("nightfox").setup({})
+    --
+    --         vim.cmd.colorscheme('carbonfox')
+    --     end
+    -- },
+    -- {
+    --     "folke/tokyonight.nvim",
+    --     lazy = false,
+    --     priority = 1000,
+    --     config = function()
+    --         require("tokyonight").setup({
+    --             style = "night",
+    --             styles = {
+    --                 comments = { italic = false },
+    --                 keywords = { italic = false },
+    --                 functions = { bold = true },
+    --             },
+    --         })
+    --
+    --         vim.cmd.colorscheme('tokyonight')
+    --     end
+    -- }
 }
