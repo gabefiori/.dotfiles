@@ -1,9 +1,12 @@
 set fish_greeting ""
 set -gx EDITOR nvim
-set -U fish_user_paths /opt/homebrew/bin/ $fish_user_paths
 set -U fish_user_paths $HOME/.cargo/bin/ $fish_user_paths
 set -U fish_user_paths /usr/local/go/bin $fish_user_paths
 set -U fish_user_paths $HOME/go/bin $fish_user_paths
+set -gx PNPM_HOME "$HOME/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
 
 alias ll "ls -l"
 alias g "git"
