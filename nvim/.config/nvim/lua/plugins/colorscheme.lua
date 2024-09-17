@@ -2,7 +2,7 @@ return {
     -- {
     --     "rebelot/kanagawa.nvim",
     --     config = function()
-    --         require('kanagawa').setup({
+    --         require("kanagawa").setup({
     --             compile = false,   -- enable compiling the colorscheme
     --             undercurl = true, -- enable undercurls
     --             commentStyle = { italic = false },
@@ -26,38 +26,32 @@ return {
     --             overrides = function(colors) -- add/modify highlights
     --                 return {}
     --             end,
-    --             theme = "dragon",    -- Load "wave" theme when 'background' option is not set
-    --             background = {       -- map the value of 'background' option to a theme
-    --                 dark = "dragon", -- try "dragon" !
+    --             theme = "dragon",    -- Load "wave" theme when "background" option is not set
+    --             background = {       -- map the value of "background" option to a theme
+    --                 dark = "wave", -- try "dragon" !
     --                 light = "lotus"
     --             },
     --         })
-    --     end
-    -- },
-    -- {
-    --     'sainnhe/gruvbox-material',
-    --     lazy = false,
-    --     priority = 1000,
-    --     config = function()
-    --         vim.g.gruvbox_material_better_performance = 1
-    --         vim.g.gruvbox_material_background = 'hard'
-    --         vim.g.gruvbox_material_foreground = 'original'
-    --         vim.g.gruvbox_material_diagnostic_virtual_text = 1
     --
-    --         vim.g.gruvbox_material_enable_bold = 1
-    --         vim.g.gruvbox_material_disable_italic_comment = 1
-    --         vim.g.gruvbox_material_enable_italic = false
-    --         vim.g.gruvbox_material_float_style = 'dim'
-    --
-    --         vim.cmd.colorscheme('gruvbox-material')
+    --         vim.cmd.colorscheme("kanagawa")
     --     end
     -- },
     {
-        "EdenEast/nightfox.nvim",
+        "sainnhe/gruvbox-material",
+        lazy = false,
+        priority = 1000,
         config = function()
-            require("nightfox").setup({})
+            vim.g.gruvbox_material_better_performance = 1
+            vim.g.gruvbox_material_background = "hard"
+            vim.g.gruvbox_material_foreground = "original"
+            vim.g.gruvbox_material_diagnostic_virtual_text = 1
 
-            vim.cmd.colorscheme('carbonfox')
+            vim.g.gruvbox_material_enable_bold = 1
+            vim.g.gruvbox_material_disable_italic_comment = 1
+            vim.g.gruvbox_material_enable_italic = false
+            vim.g.gruvbox_material_float_style = "dim"
+
+            vim.cmd.colorscheme("gruvbox-material")
         end
     },
     -- {
@@ -77,7 +71,23 @@ return {
     --             },
     --         })
     --
-    --         vim.cmd.colorscheme('tokyonight')
+    --         vim.cmd.colorscheme("tokyonight")
     --     end
-    -- }
+    -- },
+    -- {
+    --     "EdenEast/nightfox.nvim",
+    --     config = function()
+    --         require("nightfox").setup({
+    --             options = {
+    --                 inverse = { -- Inverse highlight for different types
+    --                     match_paren = true,
+    --                     visual = false,
+    --                     search = true,
+    --                 },
+    --             }
+    --         })
+    --
+    --         vim.cmd.colorscheme("carbonfox")
+    --     end
+    -- },
 }
