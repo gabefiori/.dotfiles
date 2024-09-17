@@ -34,31 +34,34 @@ return {
     --         })
     --     end
     -- },
+    -- {
+    --     'sainnhe/gruvbox-material',
+    --     lazy = false,
+    --     priority = 1000,
+    --     config = function()
+    --         vim.g.gruvbox_material_better_performance = 1
+    --         vim.g.gruvbox_material_background = 'hard'
+    --         vim.g.gruvbox_material_foreground = 'original'
+    --         vim.g.gruvbox_material_diagnostic_virtual_text = 1
+    --
+    --         vim.g.gruvbox_material_enable_bold = 1
+    --         vim.g.gruvbox_material_disable_italic_comment = 1
+    --         vim.g.gruvbox_material_enable_italic = false
+    --         vim.g.gruvbox_material_float_style = 'dim'
+    --
+    --         vim.cmd.colorscheme('gruvbox-material')
+    --     end
+    -- },
     {
-        'sainnhe/gruvbox-material',
-        lazy = false,
-        priority = 1000,
+        "EdenEast/nightfox.nvim",
         config = function()
-            vim.g.gruvbox_material_better_performance = 1
-            vim.g.gruvbox_material_background = 'hard'
-            vim.g.gruvbox_material_foreground = 'original'
-            vim.g.gruvbox_material_diagnostic_virtual_text = 1
+            require("nightfox").setup({})
 
-            vim.g.gruvbox_material_enable_bold = 1
-            vim.g.gruvbox_material_disable_italic_comment = 1
-            vim.g.gruvbox_material_enable_italic = false
-            vim.g.gruvbox_material_float_style = 'dim'
-
-            vim.cmd.colorscheme('gruvbox-material')
+            vim.cmd.colorscheme('carbonfox')
         end
     },
     -- {
-    --     "EdenEast/nightfox.nvim",
-    --     config = function ()
-    --        require("nightfox").setup({})
-    --
-    --         vim.cmd.colorscheme('carbonfox')
-    --     end
+    --     "tjdevries/colorbuddy.nvim",
     -- },
     -- {
     --     "folke/tokyonight.nvim",

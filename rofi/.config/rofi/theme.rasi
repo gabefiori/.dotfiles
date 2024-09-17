@@ -12,12 +12,13 @@ configuration {
 
 * {
     // colorscheme
-    background:     #282828;
-    background-alt: #3c3836;
-    foreground:     #ebdbb2;
-    selected:       #458588;
-    active:         #b8bb26;
-    urgent:         #fb4934;
+    background:     #262626;
+    background-alt: #393939;
+    foreground:     #FFFFFFFF;
+    selected:       #33b1ff;
+    active:         #98C379FF;
+    urgent:         #E06C75FF;
+
     
     font: "Berkeley Mono 12";
 
