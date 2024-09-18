@@ -56,6 +56,9 @@ return {
     },
     -- {
     --     "tjdevries/colorbuddy.nvim",
+    --     config = function()
+    --         vim.cmd.colorscheme("colorbuddy")
+    --     end
     -- },
     -- {
     --     "folke/tokyonight.nvim",
