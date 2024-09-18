@@ -41,6 +41,9 @@ return {
                     format = lspkink.cmp_format()
                 }
             })
+
+            vim.opt.completeopt = { "menu", "menuone", "noselect" }
+            vim.opt.shortmess:append "c"
         end,
     },
 }

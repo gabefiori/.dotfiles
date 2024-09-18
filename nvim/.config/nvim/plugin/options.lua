@@ -1,40 +1,19 @@
-local cmd = vim.cmd
 local opt = vim.opt
-local g = vim.g
-
---  Netrw
-g.netrw_banner = 0
-g.netrw_liststyle = 3
-g.netrw_browse_split = 0
-
--- Theme
-opt.termguicolors = true
-g.background = "dark"
-
--- Main Configs
-opt.wildignore = { "**/node_modules/*", "**/.git/*", "*.lock" }
-
-opt.syntax = "off"
 
 opt.wrap = false
 opt.number = true
 opt.relativenumber = true
-opt.cursorline = true
 opt.signcolumn = "yes"
-opt.colorcolumn = "80"
 opt.guicursor = ''
+
+opt.smartcase = true
+opt.ignorecase = true
 
 opt.expandtab = true
 opt.tabstop = 4
-opt.softtabstop = 4
 opt.shiftwidth = 4
-opt.scrolloff = 8
-
-opt.smartindent = true
 
 opt.swapfile = false
-opt.backup = false
-opt.hidden = true
 
 opt.incsearch = true
 opt.hlsearch = true
@@ -44,9 +23,10 @@ opt.splitbelow = true
 
 opt.inccommand = "split"
 
-opt.updatetime = 1000
+opt.formatoptions:remove "o"
 
 -- Undo
+opt.shada = { "'10", "<0", "s10", "h" }
 opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 opt.undofile = true
 opt.undolevels = 500
