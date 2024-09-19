@@ -18,14 +18,26 @@ return {
 
             cmp.setup {
                 sources = {
-                    { name = "nvim_lsp", keyword_length = 4 },
-                    { name = "buffer",   keyword_length = 4 },
+                    { name = "nvim_lsp" },
+                    { name = "buffer" },
                     { name = "path" },
+                },
+
+                -- By default, the completion popup is disabled to prevent it from appearing automatically.
+                -- It will only be activated when <C-n> is pressed in insert mode
+                completion = {
+                    autocomplete = false,
                 },
 
                 mapping = {
                     ["<C-p>"] = cmp.mapping.select_prev_item { behavior = cmp.SelectBehavior.Select },
-                    ["<C-n>"] = cmp.mapping.select_next_item { behavior = cmp.SelectBehavior.Select },
+                    ["<C-n>"] = cmp.mapping(function()
+                        if cmp.visible() then
+                            cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
+                        else
+                            cmp.complete()
+                        end
+                    end, { "i", "s" }),
                     ["<C-y>"] = cmp.mapping(
                         cmp.mapping.confirm {
                             behavior = cmp.ConfirmBehavior.Insert,
@@ -41,6 +53,13 @@ return {
                     end,
                 },
             }
+
+            local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+            cmp.event:on(
+                'confirm_done',
+                cmp_autopairs.on_confirm_done()
+            )
+
         end,
     },
 }
