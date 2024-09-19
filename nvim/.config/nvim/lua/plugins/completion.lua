@@ -4,22 +4,18 @@ return {
         lazy = false,
         priority = 100,
         dependencies = {
-            "onsails/lspkind.nvim",
             "hrsh7th/cmp-nvim-lsp",
             "hrsh7th/cmp-path",
             "hrsh7th/cmp-buffer",
-            { "L3MON4D3/LuaSnip", build = "make install_jsregexp" },
-            "saadparwaiz1/cmp_luasnip",
         },
         config = function()
             local cmp = require("cmp")
             local cmp_select = { behavior = cmp.SelectBehavior.Select }
-            local lspkink = require("lspkind")
 
             cmp.setup({
                 snippet = {
                     expand = function(args)
-                        require('luasnip').lsp_expand(args.body)
+                        vim.snippet.expand(args.body)
                     end,
                 },
 
@@ -32,14 +28,9 @@ return {
 
                 sources = cmp.config.sources({
                     { name = 'nvim_lsp' },
-                    { name = 'luasnip' }, -- For luasnip users.
                     { name = 'path' },
                     { name = 'buffer' },
                 }),
-
-                formatting = {
-                    format = lspkink.cmp_format()
-                }
             })
 
             vim.opt.completeopt = { "menu", "menuone", "noselect" }
