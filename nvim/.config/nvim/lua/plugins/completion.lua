@@ -24,20 +24,30 @@ return {
                 },
 
                 -- By default, the completion popup is disabled to prevent it from appearing automatically.
-                -- It will only be activated when <C-n> is pressed in insert mode
                 completion = {
                     autocomplete = false,
                 },
 
                 mapping = {
-                    ["<C-p>"] = cmp.mapping.select_prev_item { behavior = cmp.SelectBehavior.Select },
-                    ["<C-n>"] = cmp.mapping(function()
-                        if cmp.visible() then
-                            cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
-                        else
-                            cmp.complete()
-                        end
-                    end, { "i", "s" }),
+                    ['<C-n>'] = {
+                        i = function()
+                            if cmp.visible() then
+                                cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
+                            else
+                                cmp.complete()
+                            end
+                        end,
+                    },
+                    ['<C-p>'] = {
+                        i = function()
+                            if cmp.visible() then
+                                cmp.select_prev_item({ behavior = cmp.SelectBehavior.Select })
+                            else
+                                cmp.complete()
+                            end
+                        end,
+                    },
+
                     ["<C-y>"] = cmp.mapping(
                         cmp.mapping.confirm {
                             behavior = cmp.ConfirmBehavior.Insert,
@@ -59,7 +69,6 @@ return {
                 'confirm_done',
                 cmp_autopairs.on_confirm_done()
             )
-
         end,
     },
 }
