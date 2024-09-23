@@ -1,5 +1,5 @@
-colorscheme desert
-highlight Comment ctermfg=green
+colorscheme retrobox
+set background=dark
 
 let mapleader = "  "
 
