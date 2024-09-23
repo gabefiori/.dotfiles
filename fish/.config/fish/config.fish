@@ -27,8 +27,12 @@ end
 bind \cY accept-autosuggestion
 bind \cE edit_command_buffer
 
-if test -d ~/.asdf
-    source ~/.asdf/asdf.fish
+if type -q mise 
+    if status is-interactive
+        mise activate fish | source
+    else
+        mise activate fish --shims | source
+    end
 end
 
 zoxide init --cmd cd fish | source
