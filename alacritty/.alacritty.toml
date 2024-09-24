@@ -1,9 +1,9 @@
 [[colors.indexed_colors]]
-color = "#fe8019"
+color = "#ffa066"
 index = 16
 
 [[colors.indexed_colors]]
-color = "#d65d0e"
+color = "#ff5d62"
 index = 17
 
 [[colors.indexed_colors]]
@@ -23,32 +23,32 @@ color = "#ebdbb2"
 index = 21
 
 [colors.bright]
-black = "0x665c54"
-blue = "0xbdae93"
-cyan = "0xd65d0e"
-green = "0x3c3836"
-magenta = "0xebdbb2"
-red = "0xfe8019"
-white = "0xfbf1c7"
-yellow = "0x504945"
+black = "0x727169"
+blue = "0x7fb4ca"
+cyan = "0x7aa89f"
+green = "0x98bb6c"
+magenta = "0x938aa9"
+red = "0xe82424"
+white = "0xdcd7ba"
+yellow = "0xe6c384"
 
 [colors.cursor]
-cursor = "0xd5c4a1"
-text = "0x1d2021"
+cursor = "0xdcd7ba"
+text = "0x1f1f28"
 
 [colors.normal]
-black = "0x1d2021"
-blue = "0x83a598"
-cyan = "0x8ec07c"
-green = "0xb8bb26"
-magenta = "0xd3869b"
-red = "0xfb4934"
-white = "0xd5c4a1"
-yellow = "0xfabd2f"
+black = "0x090618"
+blue = "0x7e9cd8"
+cyan = "0x6a9589"
+green = "0x76946a"
+magenta = "0x957fb8"
+red = "0xc34043"
+white = "0xc8c093"
+yellow = "0xc0a36e"
 
 [colors.primary]
-background = "0x1d2021"
-foreground = "0xd5c4a1"
+background = "0x1f1f28"
+foreground = "0xdcd7ba"
 
 [env]
 TERM = "xterm-256color"
@@ -66,4 +66,3 @@ title = "Terminal"
 
 [window.padding]
 x = 6
-y = 4

@@ -11,16 +11,12 @@ if not string match -q -- $PNPM_HOME $PATH
 end
 
 set -gx EDITOR nvim
-set -gx BAT_THEME "gruvbox-dark"
-
 
 alias ll "ls -l"
-alias g "git"
-alias gu "gitui"
 alias vim "nvim"
 
 if type -q bat
-    alias cat "bat --theme gruvbox-dark"
+    alias cat "bat"
 end
 
 if type -q exa
