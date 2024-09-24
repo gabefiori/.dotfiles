@@ -1,5 +1,14 @@
 local opt = vim.opt
 
+vim.cmd.colorscheme("lunaperche")
+vim.cmd [[highlight Normal guibg=NONE ctermbg=NONE]]
+vim.cmd [[highlight NonText guibg=NONE ctermbg=NONE]]
+vim.cmd [[highlight LineNr guibg=NONE ctermbg=NONE]]
+
+-- vim.cmd.colorscheme("retrobox")
+
+opt.background = "dark"
+
 opt.wrap = false
 opt.number = true
 opt.relativenumber = true
