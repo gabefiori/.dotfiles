@@ -7,3 +7,5 @@ vim.cmd [[highlight StatusLineNC guifg=#151515 guibg=#ffffff gui=bold,reverse ct
 vim.cmd [[highlight VertSplit guifg=#303030 guibg=#303030 gui=NONE cterm=NONE]]
 
 -- vim.cmd.colorscheme("retrobox")
+
+vim.opt.background = "dark"
