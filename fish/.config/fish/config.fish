@@ -16,6 +16,10 @@ alias ll "ls -l"
 alias vim "nvim"
 alias g "git"
 
+function sp
+    cd (ts -ot)
+end
+
 if type -q bat
     alias cat "bat"
 end
