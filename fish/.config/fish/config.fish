@@ -17,7 +17,7 @@ alias vim "nvim"
 alias g "git"
 
 function sp
-    cd (ts -ot)
+    cd (tms -ot)
 end
 
 if type -q bat
@@ -42,3 +42,7 @@ end
 
 zoxide init --cmd cd fish | source
 starship init fish | source
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
