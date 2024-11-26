@@ -15,10 +15,7 @@ set -gx EDITOR nvim
 alias ll "ls -l"
 alias vim "nvim"
 alias g "git"
-
-function sp
-    cd (tms -ot)
-end
+alias sp "cd (gosp)"
 
 if type -q bat
     alias cat "bat"
