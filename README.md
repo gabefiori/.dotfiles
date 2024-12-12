@@ -9,12 +9,6 @@ stow <package name> # set config files of a specific package
 
 ## Info:
 - Window Manager: [i3](https://i3wm.org/)
-- Terminal: [Alacritty](https://alacritty.org/)
+- Terminal: [Ghostty](https://github.com/ghostty-org)
 - Shell: [Fish](https://fishshell.com/)
-- Shell Prompt: [Startship](https://starship.rs)
-- Multiplexer: [Tmux](https://github.com/tmux/tmux)
 - Editor: [Neovim](https://neovim.io/)
-
-## Tmux
-You should install a plugin manager for [Tmux](https://github.com/tmux/tmux).
-See [TPM](https://github.com/tmux-plugins/tpm).
