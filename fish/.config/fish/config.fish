@@ -14,8 +14,14 @@ set -gx EDITOR nvim
 
 alias ll "ls -l"
 alias vim "nvim"
-alias g "git"
-alias sp "cd (gosp)"
+
+function sp
+    set dir (gsp)
+
+    if test -n "$dir"
+        cd "$dir"
+    end
+end
 
 if type -q bat
     alias cat "bat"
