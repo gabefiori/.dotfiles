@@ -1,17 +1,17 @@
 window-decoration = false
 window-padding-x = 1,1
 window-padding-y = 1,1
-window-theme = ghostty
 unfocused-split-opacity = 1
 mouse-hide-while-typing = true
 
 theme = kanagawabones
 
 font-family = "Berkeley Mono"
-font-size = 14
+font-size = 15
 
 confirm-close-surface = false
-shell-integration-features = no-cursor,no-sudo,title
+shell-integration-features = no-cursor
+copy-on-select=false
 
 keybind = ctrl+space>c=new_tab
 keybind = ctrl+space>one=goto_tab:1
