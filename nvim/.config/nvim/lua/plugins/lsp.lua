@@ -65,8 +65,8 @@ return {
                 callback = function(ev)
                     vim.opt_local.omnifunc = "v:lua.vim.lsp.omnifunc"
 
-                    local builtin = require "telescope.builtin"
-                    vim.keymap.set("n", "gd", builtin.lsp_definitions, { buffer = 0 })
+                    local builtin = require "fzf-lua"
+                    vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = 0 })
                     vim.keymap.set("n", "gr", builtin.lsp_references, { buffer = 0 })
                     vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { buffer = 0 })
                     vim.keymap.set("n", "gT", vim.lsp.buf.type_definition, { buffer = 0 })
@@ -74,7 +74,6 @@ return {
 
                     vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, { buffer = 0 })
                     vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, { buffer = 0 })
-                    vim.keymap.set("n", "<space>wd", builtin.lsp_document_symbols, { buffer = 0 })
                     vim.keymap.set("n", "<space>e", vim.diagnostic.open_float, { buffer = 0 })
                     vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, { buffer = 0 })
                     vim.keymap.set("n", "<space>fm", vim.lsp.buf.format, { buffer = 0 })
