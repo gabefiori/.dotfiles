@@ -56,12 +56,10 @@ exec swayidle -w \
 #       natural_scroll enabled
 #       middle_emulation enabled
 #   }
-input * {
-    xkb_options "caps:swapescape"
-}
 
 input type:keyboard {
     xkb_layout us
+    xkb_options "caps:swapescape"
 }
 
 bindsym $mod+i exec swaymsg input type:keyboard xkb_variant "intl"
