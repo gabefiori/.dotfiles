@@ -12,6 +12,7 @@ if not string match -q -- $PNPM_HOME $PATH
 end
 
 set -gx EDITOR nvim
+set -gx BAT_THEME gruvbox-dark
 
 alias ll "ls -l"
 alias vim "nvim"

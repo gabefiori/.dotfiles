@@ -4,7 +4,7 @@ opt.wrap = false
 opt.number = true
 opt.relativenumber = true
 opt.signcolumn = "yes"
-opt.colorcolumn = "80"
+-- opt.colorcolumn = "80"
 opt.showmode = false
 -- opt.guicursor = ''
 

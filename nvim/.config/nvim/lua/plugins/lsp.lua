@@ -5,7 +5,6 @@ return {
             "williamboman/mason.nvim",
             "williamboman/mason-lspconfig.nvim",
             "nvimtools/none-ls.nvim"
-
         },
         config = function()
             local capabilities = require('blink.cmp').get_lsp_capabilities()
