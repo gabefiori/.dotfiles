@@ -13,3 +13,8 @@ set({ "n", "v" }, "<leader>y", [["+y]])
 set("n", "<leader>Y", [["+Y]])
 
 set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+
+vim.keymap.set('n', 'gl', function()
+    local new_config = not vim.diagnostic.config().virtual_lines
+    vim.diagnostic.config({ virtual_lines = new_config })
+end, { desc = 'Toggle diagnostic virtual_lines' })

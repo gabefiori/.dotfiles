@@ -27,8 +27,9 @@ opt.inccommand = "split"
 
 opt.formatoptions:remove "o"
 
--- Undo
 opt.shada = { "'10", "<0", "s10", "h" }
 opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 opt.undofile = true
 opt.undolevels = 500
+
+vim.diagnostic.config({virtual_lines=true})
