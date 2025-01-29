@@ -32,4 +32,4 @@ opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 opt.undofile = true
 opt.undolevels = 500
 
-vim.diagnostic.config({virtual_lines=true})
+-- vim.diagnostic.config({virtual_lines=true})
