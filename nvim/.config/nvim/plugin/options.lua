@@ -6,7 +6,7 @@ opt.relativenumber = true
 opt.signcolumn = "yes"
 -- opt.colorcolumn = "80"
 opt.showmode = false
--- opt.guicursor = ''
+opt.guicursor = ''
 
 opt.smartcase = true
 opt.ignorecase = true
