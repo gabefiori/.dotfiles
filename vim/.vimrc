@@ -29,10 +29,6 @@ set nobackup
 
 set scrolloff=10
 set guicursor=
-set visualbell
-
-" Tweaks for browsing
-let g:netrw_banner=0        " disable annoying banner
-let g:netrw_liststyle=3     " tree view
-let g:netrw_list_hide=netrw_gitignore#Hide()
-let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
+set noerrorbells
+set novisualbell
+set t_vb=
