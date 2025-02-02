@@ -18,7 +18,7 @@ alias ll "ls -l"
 alias vim "nvim"
 
 function sp
-    set dir (gsp)
+    set dir (search-dirs)
 
     if test -n "$dir"
         cd "$dir"
