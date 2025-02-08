@@ -13,3 +13,5 @@ set({ "n", "v" }, "<leader>y", [["+y]])
 set("n", "<leader>Y", [["+Y]])
 
 set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+
+set("t", "<C-[>", "<c-\\><c-n>")
