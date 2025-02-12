@@ -16,6 +16,7 @@ set -gx BAT_THEME gruvbox-dark
 
 alias ll "ls -l"
 alias vim "nvim"
+alias kbc "kubectl"
 
 function sp
     set dir (search-dirs)
@@ -45,8 +46,9 @@ if type -q mise
     end
 end
 
-zoxide init --cmd cd fish | source
 starship init fish | source
+zoxide init --cmd cd fish | source
+fzf --fish | source
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
