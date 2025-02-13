@@ -1,4 +1,6 @@
--- [[Options]]
+--------------------------------------------------------------------------
+-- OPTIONS
+--------------------------------------------------------------------------
 vim.env.PATH = vim.env.HOME .. "/.local/share/mise/shims:" .. vim.env.PATH
 
 vim.g.mapleader = ' '
@@ -11,7 +13,6 @@ vim.opt.relativenumber = true
 vim.opt.mouse = 'a'
 vim.opt.showmode = true
 vim.opt.breakindent = true
-vim.opt.undofile = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.signcolumn = 'yes'
@@ -27,25 +28,34 @@ vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 
+vim.opt.undofile = true
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 vim.opt.undolevels = 500
 
--- [[Keymaps]]
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = 'Copy to the system clipbloard' })
-vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = 'Copy to the system clipbloard' })
-
+--------------------------------------------------------------------------
+-- KEYMAPS
+--------------------------------------------------------------------------
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("n", "J", "mzJ`z")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
-vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>')
+vim.keymap.set('n', '<C-h>', '<C-w><C-h>')
+vim.keymap.set('n', '<C-l>', '<C-w><C-l>')
+vim.keymap.set('n', '<C-j>', '<C-w><C-j>')
+vim.keymap.set('n', '<C-k>', '<C-w><C-k>')
+vim.keymap.set("n", "<C-n>", "<CMD>Oil<CR>")
 
-vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
-
-vim.keymap.set("n", "<C-n>", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-
--- [[Autocmd]]
+--------------------------------------------------------------------------
+-- Autocommands
+--------------------------------------------------------------------------
 vim.api.nvim_create_autocmd('TextYankPost', {
     group = vim.api.nvim_create_augroup('HighlightYank', {}),
     pattern = '*',
@@ -57,12 +67,20 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     end,
 })
 
--- vim.env.PATH = vim.env.HOME .. "/.local/share/mise/shims:" .. vim.env.PATH
+--------------------------------------------------------------------------
+-- Plugins
+--------------------------------------------------------------------------
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
     local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-    local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+    local out = vim.fn.system({ "git",
+        "clone",
+        "--filter=blob:none",
+        "--branch=stable",
+        lazyrepo,
+        lazypath,
+    })
     if vim.v.shell_error ~= 0 then
         vim.api.nvim_echo({
             { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
@@ -90,68 +108,14 @@ require("lazy").setup({
                 })
 
                 vim.keymap.set("n", "<leader>ff", fzf.files, {})
-                vim.keymap.set("n", "<C-p>", fzf.git_files, {})
-                vim.keymap.set("n", "<leader>fg", fzf.live_grep, {})
+                vim.keymap.set("n", "<leader>fw", fzf.grep_cword, {})
+                vim.keymap.set("n", "<leader>fg", fzf.live_grep_native, {})
+                vim.keymap.set("n", "<leader>fr", fzf.live_grep_resume, {})
+                vim.keymap.set("v", "<leader>fg", fzf.grep_visual, {})
             end
         },
 
 
-        {
-            "neovim/nvim-lspconfig",
-            dependencies = {
-                "williamboman/mason.nvim",
-                "williamboman/mason-lspconfig.nvim",
-                -- "nvimtools/none-ls.nvim",
-                "saghen/blink.cmp"
-            },
-            config = function()
-                local capabilities = require('blink.cmp').get_lsp_capabilities()
-                local custom_settings = {}
-                local set = vim.keymap.set
-
-                require("mason").setup({})
-                require("mason-lspconfig").setup({
-                    ensure_installed = {},
-                    handlers = {
-                        function(server_name)
-                            local server = custom_settings[server_name] or {}
-                            server.capabilities = vim.tbl_deep_extend('force', {}, capabilities,
-                                server.capabilities or {})
-                            require('lspconfig')[server_name].setup(server)
-                        end,
-                    },
-                })
-
-                vim.api.nvim_create_autocmd('LspAttach', {
-                    group = vim.api.nvim_create_augroup('UserLspConfig', {}),
-                    callback = function(ev)
-                        vim.opt_local.omnifunc = "v:lua.vim.lsp.omnifunc"
-
-                        local builtin = require "fzf-lua"
-                        set("n", "gd", vim.lsp.buf.definition, { buffer = 0 })
-                        set("n", "gr", builtin.lsp_references, { buffer = 0 })
-                        set("n", "<space>dd", builtin.diagnostics_workspace, { buffer = 0 })
-                        set("n", "gD", vim.lsp.buf.declaration, { buffer = 0 })
-                        set("n", "gT", vim.lsp.buf.type_definition, { buffer = 0 })
-                        set("n", "K", vim.lsp.buf.hover, { buffer = 0 })
-
-                        set("n", "<space>rn", vim.lsp.buf.rename, { buffer = 0 })
-                        set("n", "<space>ca", vim.lsp.buf.code_action, { buffer = 0 })
-                        set("n", "<space>e", vim.diagnostic.open_float, { buffer = 0 })
-                        set("i", "<C-h>", vim.lsp.buf.signature_help, { buffer = 0 })
-                        set("n", "<space>fm", vim.lsp.buf.format, { buffer = 0 })
-                    end,
-                })
-
-                -- Formatter
-                -- local null_ls = require("null-ls")
-                -- null_ls.setup({
-                --     sources = {
-                --         -- null_ls.builtins.diagnostics.golangci_lint
-                --     },
-                -- })
-            end
-        },
 
         {
             'saghen/blink.cmp',
@@ -221,7 +185,21 @@ require("lazy").setup({
             build = ':TSUpdate',
             main = 'nvim-treesitter.configs',
             opts = {
-                ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'go', 'zig' },
+                ensure_installed = { 
+                    'bash',
+                    'c',
+                    'diff',
+                    'html',
+                    'lua',
+                    'luadoc',
+                    'markdown',
+                    'markdown_inline',
+                    'query',
+                    'vim',
+                    'vimdoc',
+                    'go',
+                    'zig',
+                },
                 auto_install = true,
                 highlight = {
                     enable = true,
@@ -248,6 +226,64 @@ require("lazy").setup({
                 vim.cmd.colorscheme("gruvbox-material")
             end
         },
+
+        -- {
+        --     "neovim/nvim-lspconfig",
+        --     dependencies = {
+        --         "williamboman/mason.nvim",
+        --         "williamboman/mason-lspconfig.nvim",
+        --         -- "nvimtools/none-ls.nvim",
+        --         "saghen/blink.cmp"
+        --     },
+        --     config = function()
+        --         local capabilities = require('blink.cmp').get_lsp_capabilities()
+        --         local custom_settings = {}
+        --         local set = vim.keymap.set
+        --
+        --         require("mason").setup({})
+        --         require("mason-lspconfig").setup({
+        --             ensure_installed = {},
+        --             handlers = {
+        --                 function(server_name)
+        --                     local server = custom_settings[server_name] or {}
+        --                     server.capabilities = vim.tbl_deep_extend('force', {}, capabilities,
+        --                         server.capabilities or {})
+        --                     require('lspconfig')[server_name].setup(server)
+        --                 end,
+        --             },
+        --         })
+        --
+        --         vim.api.nvim_create_autocmd('LspAttach', {
+        --             group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+        --             callback = function(ev)
+        --                 vim.opt_local.omnifunc = "v:lua.vim.lsp.omnifunc"
+        --
+        --                 local builtin = require "fzf-lua"
+        --                 set("n", "gd", vim.lsp.buf.definition, { buffer = 0 })
+        --                 set("n", "gr", builtin.lsp_references, { buffer = 0 })
+        --                 set("n", "<space>dd", builtin.diagnostics_workspace, { buffer = 0 })
+        --                 set("n", "gD", vim.lsp.buf.declaration, { buffer = 0 })
+        --                 set("n", "gT", vim.lsp.buf.type_definition, { buffer = 0 })
+        --                 set("n", "K", vim.lsp.buf.hover, { buffer = 0 })
+        --
+        --                 set("n", "<space>rn", vim.lsp.buf.rename, { buffer = 0 })
+        --                 set("n", "<space>ca", vim.lsp.buf.code_action, { buffer = 0 })
+        --                 set("n", "<space>e", vim.diagnostic.open_float, { buffer = 0 })
+        --                 set("i", "<C-h>", vim.lsp.buf.signature_help, { buffer = 0 })
+        --                 set("n", "<space>fm", vim.lsp.buf.format, { buffer = 0 })
+        --             end,
+        --         })
+        --
+        --         -- Formatter
+        --         -- local null_ls = require("null-ls")
+        --         -- null_ls.setup({
+        --         --     sources = {
+        --         --         -- null_ls.builtins.diagnostics.golangci_lint
+        --         --     },
+        --         -- })
+        --         --
+        --     end
+        -- },
 
     },
 
