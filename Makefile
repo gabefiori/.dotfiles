@@ -1,3 +1,4 @@
+# Detecta o sistema operacional
 UNAME_S := $(shell uname -s)
 
 ifeq ($(UNAME_S),Linux)
@@ -6,10 +7,12 @@ else
     $(error This Makefile is intended for Ubuntu only. Aborting.)
 endif
 
+SUDO ?= sudo
+
 PKG_MANAGER = apt-get
-INSTALL = sudo $(PKG_MANAGER) install -y
-UPDATE = sudo $(PKG_MANAGER) update
-PPA_ADD = sudo add-apt-repository
+INSTALL = $(SUDO) $(PKG_MANAGER) install -y
+UPDATE = $(SUDO) $(PKG_MANAGER) update
+PPA_ADD = $(SUDO) add-apt-repository
 PPA_CHECK = grep -q "$(1)" /etc/apt/sources.list /etc/apt/sources.list.d/
 
 #### TOOLS ####
@@ -24,14 +27,14 @@ install-prerequisites:
 install-neovim: install-prerequisites
 	@echo Installing Neovim...
 	git clone https://github.com/neovim/neovim
-	cd neovim && git checkout nightly && make CMAKE_BUILD_TYPE=RelWithDebInfo && sudo make install
+	cd neovim && git checkout nightly && make CMAKE_BUILD_TYPE=RelWithDebInfo && $(SUDO) make install
 	rm -rf neovim
 	stow nvim
 
 .PHONY: install-starship
 install-starship:
 	@echo Installing Starship...
-	curl -fsSL https://starship.rs/install.sh | bash
+	curl -fsSL https://starship.rs/install.sh | sh
 
 .PHONY: install-fish
 install-fish:
@@ -45,8 +48,7 @@ install-fonts:
 	@echo "Check https://berkeleygraphics.com/typefaces/berkeley-mono/"
 
 .PHONY: install-tools
-install-all: install-prerequisites install-fish install-neovim install-kitty \ 
-	 install-fisher install-starship
+install-all: install-prerequisites install-fish install-neovim install-kitty install-fisher install-starship
 
 .PHONY: install-all
 install-all: install-tools
@@ -54,10 +56,10 @@ install-all: install-tools
 .PHONY: help
 help:
 	@echo "Available targets:"
-	@echo "install-all           - Install all tools and runtimes/languages"
-	@echo "install-tools         - Install all tools"
-	@echo "install-lang          - Install all runtimes/languages"
-	@echo "install-prerequisites - Install all prerequisites"
-	@echo "install-neovim        - Install Neovim"
-	@echo "install-tmux          - Install Tmux"
-	@echo "help                  - Show this help message"
+	@echo "  install-all           - Install all tools and runtimes/languages"
+	@echo "  install-tools         - Install all tools"
+	@echo "  install-lang          - Install all runtimes/languages"
+	@echo "  install-prerequisites - Install all prerequisites"
+	@echo "  install-neovim        - Install Neovim"
+	@echo "  install-tmux          - Install Tmux"
+	@echo "  help                  - Show this help message"
