@@ -27,6 +27,8 @@ vim.opt.guicursor = ''
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
+vim.opt.swapfile = false
+vim.opt.colorcolumn = "100"
 
 vim.opt.undofile = true
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
@@ -100,12 +102,7 @@ require("lazy").setup({
             "ibhagwan/fzf-lua",
             config = function()
                 local fzf = require("fzf-lua")
-                fzf.setup({
-                    { "max-perf" },
-                    winopts = {
-                        border = "none",
-                    },
-                })
+                fzf.setup({ "borderless" })
 
                 vim.keymap.set("n", "<leader>ff", fzf.files, {})
                 vim.keymap.set("n", "<leader>fw", fzf.grep_cword, {})
@@ -114,8 +111,6 @@ require("lazy").setup({
                 vim.keymap.set("v", "<leader>fg", fzf.grep_visual, {})
             end
         },
-
-
 
         {
             'saghen/blink.cmp',
@@ -133,9 +128,11 @@ require("lazy").setup({
                     use_nvim_cmp_as_default = true,
                     nerd_font_variant = 'mono'
                 },
+                cmdline = {
+                    enabled = false
+                },
                 sources = {
                     default = { 'lsp', 'path', 'snippets', 'buffer' },
-                    cmdline = {},
                 },
             },
             opts_extend = { "sources.default" }
@@ -210,20 +207,49 @@ require("lazy").setup({
         },
 
         {
-            "sainnhe/gruvbox-material",
-            lazy = false,
-            priority = 1000,
+            "rebelot/kanagawa.nvim",
             config = function()
-                vim.g.gruvbox_material_better_performance = 1
-                vim.g.gruvbox_material_background = "hard"
-                vim.g.gruvbox_material_foreground = "original"
-                vim.g.gruvbox_material_diagnostic_virtual_text = 1
-                vim.g.gruvbox_material_enable_bold = 1
-                vim.g.gruvbox_material_disable_italic_comment = 1
-                vim.g.gruvbox_material_enable_italic = false
-                vim.g.gruvbox_material_float_style = "dim"
-
-                vim.cmd.colorscheme("gruvbox-material")
+                require("kanagawa").setup({
+                    compile = true,   
+                    undercurl = true, 
+                    commentStyle = { italic = false },
+                    functionStyle = { bold = true },
+                    keywordStyle = { italic = false },
+                    statementStyle = { bold = false },
+                    typeStyle = {},
+                    transparent = false,   
+                    dimInactive = false,   
+                    terminalColors = true, 
+                    colors = {             
+                        palette = {},
+                        theme = { all = { ui = { bg_gutter = "none", }}},
+                    },
+                    theme = "wave",    
+                    background = {     
+                        dark = "wave", 
+                        light = "lotus"
+                    },
+                    overrides = function(colors)
+                        local theme = colors.theme
+                        return {
+                            NormalDark = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
+                            LazyNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
+                            MasonNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
+                            TelescopeTitle = { fg = theme.ui.special, bold = true },
+                            TelescopePromptNormal = { bg = theme.ui.bg_p1 },
+                            TelescopePromptBorder = { fg = theme.ui.bg_p1, bg = theme.ui.bg_p1 },
+                            TelescopeResultsNormal = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m1 },
+                            TelescopeResultsBorder = { fg = theme.ui.bg_m1, bg = theme.ui.bg_m1 },
+                            TelescopePreviewNormal = { bg = theme.ui.bg_dim },
+                            TelescopePreviewBorder = { bg = theme.ui.bg_dim, fg = theme.ui.bg_dim },
+                            Pmenu = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 }, -- add `blend = vim.o.pumblend` to enable transparency
+                            PmenuSel = { bg = theme.ui.bg_p2 },
+                            PmenuSbar = { bg = theme.ui.bg_m1 },
+                            PmenuThumb = { bg = theme.ui.bg_p2 },
+                        }
+                    end,
+                })
+                vim.cmd.colorscheme("kanagawa")
             end
         },
 
@@ -263,6 +289,8 @@ require("lazy").setup({
                         vim.keymap.set("n", "<space>fm", vim.lsp.buf.format, { buffer = 0 })
                     end,
                 })
+
+                vim.diagnostic.config { virtual_text = true, virtual_lines = false }
             end
         }
     },

@@ -5,7 +5,7 @@
 [include]
   path = ~/.gitconfig.local
 
-[includeIf "gitdir:~/Programming/personal/"]
+[includeIf "gitdir:~/dev/personal/"]
     path = ~/.gitconfig.personal
 
 [includeIf "gitdir:~/.dotfiles/"]

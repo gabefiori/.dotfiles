@@ -1,12 +1,10 @@
 window-decoration = true
-window-padding-x = 1,1
-window-padding-y = 1,1
 unfocused-split-opacity = 1
 mouse-hide-while-typing = true
 
-theme = GruvboxDarkHard
+theme = kanagawabones
 
-font-family = "TX-02"
+font-family = "Berkeley Mono"
 font-size = 15.4
 
 confirm-close-surface = false

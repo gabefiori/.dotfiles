@@ -32,5 +32,3 @@ if type -q mise
         mise activate fish --shims | source
     end
 end
-
-fzf --fish | source
