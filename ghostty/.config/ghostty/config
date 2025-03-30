@@ -1,4 +1,4 @@
-window-decoration = true
+window-decoration = client
 unfocused-split-opacity = 1
 mouse-hide-while-typing = true
 

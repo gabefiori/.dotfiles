@@ -258,7 +258,9 @@ require("lazy").setup({
             dependencies = { 'saghen/blink.cmp' },
             opts = {
                 servers = {
-                    gopls = {}
+                    gopls = {},
+                    ols = {},
+                    zls = {}
                 }
             },
             config = function(_, opts)
