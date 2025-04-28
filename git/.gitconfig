@@ -5,11 +5,12 @@
 [include]
   path = ~/.gitconfig.local
 
-[includeIf "gitdir:~/dev/personal/"]
-    path = ~/.gitconfig.personal
-
-[includeIf "gitdir:~/.dotfiles/"]
-    path = ~/.gitconfig.personal
+;
+; [includeIf "gitdir:~/dev/personal/"]
+;     path = ~/.gitconfig.personal
+;
+; [includeIf "gitdir:~/.dotfiles/"]
+;     path = ~/.gitconfig.personal
 
 [core]
 	editor = vim
