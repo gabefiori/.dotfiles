@@ -5,6 +5,7 @@ set -U fish_user_paths /usr/local/go/bin $fish_user_paths
 set -U fish_user_paths $HOME/go/bin $fish_user_paths
 set -U fish_user_paths $HOME/.odin/ $fish_user_paths
 set -U fish_user_paths $HOME/.local $fish_user_paths
+set -U fish_user_paths $HOME/scripts $fish_user_paths
 
 set -gx EDITOR nvim
 set -gx BAT_THEME gruvbox-dark
