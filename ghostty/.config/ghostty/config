@@ -1,11 +1,11 @@
-window-decoration = client
+# window-decoration = client
 unfocused-split-opacity = 1
 mouse-hide-while-typing = true
 
 theme = kanagawabones
 
 font-family = "Berkeley Mono"
-font-size = 14.5
+font-size = 15
 
 confirm-close-surface = false
 shell-integration-features = no-cursor
