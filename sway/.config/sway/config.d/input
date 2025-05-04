@@ -1,0 +1,18 @@
+input type:touchpad {
+	dwt enabled
+	tap enabled
+	natural_scroll disabled
+	middle_emulation enabled
+}
+
+input "1:1:AT_Translated_Set_2_keyboard" {
+	xkb_options "caps:swapescape"	
+}
+
+exec_always {
+    'swaymsg input type:keyboard xkb_layout "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")"'
+    'swaymsg input type:keyboard xkb_variant "$(localectl status | grep "X11 Variant" | sed -e "s/^.*X11 Variant://")"'
+}
+
+bindsym $mod+i exec swaymsg input type:keyboard xkb_variant "intl"
+bindsym $mod+o exec swaymsg input type:keyboard xkb_variant '""'

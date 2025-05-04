@@ -1,5 +1,5 @@
 # Dotfiles
-I'm currently using Ubuntu. You can manage my configs with [GNU Stow](https://www.gnu.org/software/stow/):
+I'm currently using EndeavourOS. You can manage my configs with [GNU Stow](https://www.gnu.org/software/stow/):
 
 ```sh
 stow */             # set config files of all packages

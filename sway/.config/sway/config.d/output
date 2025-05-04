@@ -11,13 +11,5 @@ workspace 7 output $display2
 workspace 8 output $display2
 workspace 9 output $display1
 
-gaps inner 5
-gaps outer 1
-
-$unbindsym $mod+Return
-$bindsym $mod+Return exec ghostty
-
-$bindsym $mod+i exec swaymsg input type:keyboard xkb_variant "intl"
-$bindsym $mod+o exec swaymsg input type:keyboard xkb_variant '""'
-
-exec way-displays > /tmp/way-displays.${XDG_VTNR}.${USER}.log 2>&1
+output $display1 resolution 1920x1080 position 1920,0
+output $display2 resolution 1920x1080 
