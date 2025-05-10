@@ -18,7 +18,12 @@ if type -q bat
     alias cat "bat"
 end
 
+if type -q zeditor
+    alias zed "zeditor"
+end
+
 if type -q exa
+    alias ls "exa"
     alias ll "exa -l -g --icons"
     alias lla "ll -a"
 end

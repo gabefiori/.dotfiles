@@ -260,7 +260,8 @@ require("lazy").setup({
                 servers = {
                     gopls = {},
                     ols = {},
-                    zls = {}
+                    zls = {},
+                    clangd = {},
                 }
             },
             config = function(_, opts)
@@ -309,16 +310,6 @@ require("lazy").setup({
         rtp = {
             reset = true,
             paths = {},
-            disabled_plugins = {
-                "gzip",
-                "matchit",
-                "matchparen",
-                "netrwPlugin",
-                "tarPlugin",
-                "tohtml",
-                "tutor",
-                "zipPlugin",
-            },
         },
     },
 })
