@@ -38,3 +38,7 @@ if type -q mise
         mise activate fish --shims | source
     end
 end
+
+if type -q starship
+    starship init fish | source
+end
