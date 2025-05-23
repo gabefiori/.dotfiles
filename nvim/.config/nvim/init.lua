@@ -33,7 +33,6 @@ vim.opt.colorcolumn = "100"
 vim.opt.undofile = true
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
-vim.opt.undolevels = 500
 
 --------------------------------------------------------------------------
 -- KEYMAPS
@@ -114,25 +113,22 @@ require("lazy").setup({
 
         {
             'saghen/blink.cmp',
-            dependencies = 'rafamadriz/friendly-snippets',
             version = '*',
             opts = {
                 keymap = { preset = 'default' },
                 completion = {
                     menu = {
-                        auto_show = false
+                        auto_show = false,
+                        draw = {
+                            columns = { { "label", "label_description", gap = 1 }, { "kind" } }
+                        }
                     }
-                },
-
-                appearance = {
-                    use_nvim_cmp_as_default = true,
-                    nerd_font_variant = 'mono'
                 },
                 cmdline = {
                     enabled = false
                 },
                 sources = {
-                    default = { 'lsp', 'path', 'snippets', 'buffer' },
+                    default = { 'lsp', 'path', 'buffer' },
                 },
             },
             opts_extend = { "sources.default" }
