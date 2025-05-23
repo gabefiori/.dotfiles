@@ -310,6 +310,17 @@ require("lazy").setup({
         rtp = {
             reset = true,
             paths = {},
+            disabled_plugins = {
+                "gzip",
+                -- "matchit",
+                -- "matchparen",
+                "netrwPlugin",
+                "rplugin",
+                "tarPlugin",
+                "tohtml",
+                "tutor",
+                "zipPlugin",
+            },
         },
     },
 })
