@@ -5,23 +5,23 @@ mouse-hide-while-typing = true
 theme = kanagawabones
 
 font-family = "Berkeley Mono"
-font-size = 15
+font-size = 15.2
 
 confirm-close-surface = false
 shell-integration-features = no-cursor
 copy-on-select=false
 
-keybind = ctrl+b>c=new_tab
-keybind = ctrl+b>one=goto_tab:1
-keybind = ctrl+b>two=goto_tab:2
-keybind = ctrl+b>three=goto_tab:3
-keybind = ctrl+b>four=goto_tab:4
-keybind = ctrl+b>five=goto_tab:5
-keybind = ctrl+b>six=goto_tab:6
-
-keybind = ctrl+b>o=new_split:right
-keybind = ctrl+b>e=new_split:down
-keybind = ctrl+b>k=goto_split:top
-keybind = ctrl+b>l=goto_split:right
-keybind = ctrl+b>j=goto_split:bottom
-keybind = ctrl+b>h=goto_split:left
+# keybind = ctrl+b>c=new_tab
+# keybind = ctrl+b>one=goto_tab:1
+# keybind = ctrl+b>two=goto_tab:2
+# keybind = ctrl+b>three=goto_tab:3
+# keybind = ctrl+b>four=goto_tab:4
+# keybind = ctrl+b>five=goto_tab:5
+# keybind = ctrl+b>six=goto_tab:6
+#
+# keybind = ctrl+b>o=new_split:right
+# keybind = ctrl+b>e=new_split:down
+# keybind = ctrl+b>k=goto_split:top
+# keybind = ctrl+b>l=goto_split:right
+# keybind = ctrl+b>j=goto_split:bottom
+# keybind = ctrl+b>h=goto_split:left

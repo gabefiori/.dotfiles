@@ -194,11 +194,8 @@ require("lazy").setup({
                     'zig',
                 },
                 auto_install = true,
-                highlight = {
-                    enable = true,
-                    additional_vim_regex_highlighting = { 'ruby' },
-                },
-                indent = { enable = true, disable = { 'ruby' } },
+                highlight = { enable = true },
+                indent = { enable = true},
             },
         },
 
@@ -207,18 +204,39 @@ require("lazy").setup({
             config = function()
                 require("kanagawa").setup({
                     compile = true,   
-                    undercurl = true, 
+                    undercurl = false, 
                     commentStyle = { italic = false },
-                    functionStyle = { bold = true },
-                    keywordStyle = { italic = false },
+                    functionStyle = { bold = false },
+                    keywordStyle = { italic = false, bold = false },
                     statementStyle = { bold = false },
-                    typeStyle = {},
+                    typeStyle = { bold = false },
                     transparent = false,   
                     dimInactive = false,   
                     terminalColors = true, 
                     colors = {             
                         palette = {},
-                        theme = { all = { ui = { bg_gutter = "none", }}},
+                        theme = { 
+                            all = { 
+                                ui = { bg_gutter = "none",  },
+                                syn = {
+                                    variable   = "none",
+                                    constant   = "none",
+                                    identifier = "none",
+                                    parameter  = "none",
+                                    fun        = "none",
+                                    statement  = "none",
+                                    operator   = "none",
+                                    preproc    = "none",
+                                    regex      = "none",
+                                    deprecated = "none",
+                                    comment    = "#A3D4D5",
+                                    punct      = "none",
+                                    special1   = "none",
+                                    special2   = "none",
+                                    special3   = "none",
+                                },
+                            },
+                        },
                     },
                     theme = "wave",    
                     background = {     

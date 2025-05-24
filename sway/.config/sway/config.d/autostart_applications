@@ -34,6 +34,9 @@ exec sleep 2 && firewall-applet
 # Welcome App
 exec eos-welcome --startdelay=3
 
+# Day/Night gamma
+exec wlsunset -S 6:00 -s 19:00 -t 4600
+
 # Sway Fader
 # exec python3 ~/.config/sway/scripts/swayfader.py
 
