@@ -32,7 +32,6 @@ vim.opt.colorcolumn = "100"
 
 vim.opt.undofile = true
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
-vim.opt.undofile = true
 
 --------------------------------------------------------------------------
 -- KEYMAPS
@@ -226,12 +225,14 @@ require("lazy").setup({
                                     statement  = "none",
                                     preproc    = "none",
                                     regex      = "none",
-                                    deprecated = "none",
-                                    comment    = "#A3D4D5",
                                     punct      = "none",
+                                    operator   = "none",
+                                    keyword    = "#7E9CD8",
+                                    type       = "none",
+                                    comment    = "#A3D4D5",
                                     special1   = "none",
                                     special2   = "none",
-                                    special3   = "none",
+                                    special3   = "#7E9CD8",
                                 },
                             },
                         },
