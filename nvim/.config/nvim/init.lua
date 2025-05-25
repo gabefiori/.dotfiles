@@ -224,7 +224,6 @@ require("lazy").setup({
                                     parameter  = "none",
                                     fun        = "none",
                                     statement  = "none",
-                                    operator   = "none",
                                     preproc    = "none",
                                     regex      = "none",
                                     deprecated = "none",
