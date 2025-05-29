@@ -13,7 +13,6 @@ set -gx BAT_THEME gruvbox-dark
 alias ll "ls -l"
 alias vim "nvim"
 alias k "kubectl"
-alias dn "daily-notes"
 
 if type -q bat
     alias cat "bat"
