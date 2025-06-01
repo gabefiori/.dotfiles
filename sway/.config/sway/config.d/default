@@ -1,5 +1,5 @@
 # Logo key. Use Mod1 for Alt.
-set $mod Mod1
+set $mod Mod4
 
 # Add Vim key support
 set $left h
