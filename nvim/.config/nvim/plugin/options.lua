@@ -16,7 +16,7 @@ opt.inccommand = 'split'
 opt.scrolloff = 10
 
 opt.mouse = 'a'
-opt.guicursor = ''
+-- opt.guicursor = ''
 
 opt.expandtab = true
 opt.tabstop = 4
