@@ -2,7 +2,7 @@ return {
     "ibhagwan/fzf-lua",
     config = function()
         local fzf = require("fzf-lua")
-        fzf.setup({ "borderless" })
+        fzf.setup({ "border-fused" })
 
         vim.keymap.set("n", "<leader>ff", fzf.files, {})
         vim.keymap.set("n", "<leader>fw", fzf.grep_cword, {})

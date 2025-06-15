@@ -8,7 +8,6 @@ set -U fish_user_paths $HOME/.local/bin $fish_user_paths
 set -U fish_user_paths $HOME/scripts $fish_user_paths
 
 set -gx EDITOR nvim
-set -gx BAT_THEME gruvbox-dark
 
 alias ll "ls -l"
 alias vim "nvim"
