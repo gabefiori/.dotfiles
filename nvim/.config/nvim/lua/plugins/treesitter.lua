@@ -1,24 +1,34 @@
 return {
-    'nvim-treesitter/nvim-treesitter',
-    build = ':TSUpdate',
-    main = 'nvim-treesitter.configs',
-    opts = {
-        ensure_installed = { 
-            'bash',
-            'fish',
-            'c',
-            'comment',
-            'diff',
-            'lua',
-            'markdown',
-            'vim',
-            'vimdoc',
-            'go',
-            'zig',
-            'odin',
+    {
+        'nvim-treesitter/nvim-treesitter',
+        build = ':TSUpdate',
+        main = 'nvim-treesitter.configs',
+        opts = {
+            ensure_installed = { 
+                'bash',
+                'fish',
+                'c',
+                'comment',
+                'diff',
+                'lua',
+                'markdown',
+                'vim',
+                'vimdoc',
+                'go',
+                'regex',
+                'zig',
+                'odin',
+            },
+            auto_install = true,
+            highlight = { enable = true },
+            indent = { enable = true},
         },
-        auto_install = true,
-        highlight = { enable = true },
-        indent = { enable = true},
     },
+    {
+        'nvim-treesitter/nvim-treesitter-context',
+        after = "nvim-treesitter",
+        config = function()
+            require'treesitter-context'.setup()
+        end
+    }
 }
