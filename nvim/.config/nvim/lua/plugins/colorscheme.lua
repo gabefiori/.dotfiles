@@ -29,7 +29,7 @@ return {
                             punct      = "none",
                             operator   = "none",
                             keyword    = "#7E9CD8",
-                            -- type       = "none",
+                            type       = "none",
                             comment    = "#A3D4D5",
                             special1   = "none",
                             special2   = "none",
