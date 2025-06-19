@@ -8,7 +8,7 @@ set $up k
 set $right l
 
 # Set default terminal emulator
-# set $term ghostty
+set $term ghostty
 
 # Application launcher
 set $launcher fuzzel
@@ -24,7 +24,7 @@ set $powermenu ~/.config/sway/scripts/power_menu.sh
 # Basics:
 #
     # Launch the terminal
-    bindsym $mod+Return exec ghostty
+    bindsym $mod+Return exec $term
 
     # Open the power menu
     bindsym $mod+Shift+e exec $powermenu
