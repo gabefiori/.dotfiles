@@ -1,7 +1,7 @@
 local set = vim.keymap.set
 
-set("v", "J", ":m '>+1<CR>gv=gv")
-set("v", "K", ":m '<-2<CR>gv=gv")
+set("v", "J", ":m '>+1<CR>gv=gv", { silent = true })
+set("v", "K", ":m '<-2<CR>gv=gv", { silent = true })
 set("n", "J", "mzJ`z")
 set("n", "<C-d>", "<C-d>zz")
 set("n", "<C-u>", "<C-u>zz")
