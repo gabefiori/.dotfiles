@@ -3,7 +3,7 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
         local fzf = require("fzf-lua")
-        fzf.setup({ "border-fused" })
+        fzf.setup({ "borderless-full" })
 
         vim.keymap.set("n", "<leader>ff", fzf.files, {})
         vim.keymap.set("n", "<leader>fw", fzf.grep_cword, {})
