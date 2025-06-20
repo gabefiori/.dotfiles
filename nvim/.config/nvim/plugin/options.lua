@@ -33,4 +33,5 @@ opt.timeoutlen = 300
 
 opt.undofile = true
 opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+opt.autoread = true
 opt.shada = { "'10", "<0", "s10", "h" }
