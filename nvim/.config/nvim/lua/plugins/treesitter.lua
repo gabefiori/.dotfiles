@@ -19,7 +19,7 @@ return {
             'odin',
         },
         auto_install = true,
-        highlight = { enable = true },
+        highlight = { enable = false },
         indent = { enable = true},
     },
 }
