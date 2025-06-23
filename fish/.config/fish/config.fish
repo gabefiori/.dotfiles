@@ -12,6 +12,7 @@ set -gx EDITOR nvim
 alias ll "ls -l"
 alias vim "nvim"
 alias k "kubectl"
+alias lg "lazygit"
 
 if type -q bat
     alias cat "bat"
