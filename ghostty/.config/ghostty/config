@@ -5,7 +5,7 @@ mouse-hide-while-typing = true
 theme = kanagawabones
 
 font-family = "Berkeley Mono"
-font-size = 15.0
+font-size = 14.0
 
 confirm-close-surface = false
 shell-integration-features = no-cursor
