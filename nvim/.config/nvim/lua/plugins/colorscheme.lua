@@ -25,7 +25,7 @@ return {
                             parameter  = "none",
                             fun        = "none",
                             statement  = "none",
-                            preproc    = "none",
+                            preproc    = "#7FB4CA",
                             string     = "#E6C384",
                             -- regex      = "none",
                             punct      = "none",
